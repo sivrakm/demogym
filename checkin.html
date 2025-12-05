@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Check-in/Check-out</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0df280",
+              "background-light": "#f5f8f7",
+              "background-dark": "#102219",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col font-display dark group/design-root overflow-x-hidden" style="background-color: #10231a;">
+<div class="flex h-full grow flex-col">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center text-white">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Check-in / Check-out</h2>
+</div>
+<!-- Main Content -->
+<div class="flex flex-1 flex-col px-4 pt-4">
+<!-- User Greeting -->
+<div class="flex items-center gap-4 py-2 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14 shrink-0" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDJ1PiH2dc1u3ihvtnZzb7BC4QLzKX_AVcOMd2QhB67zZXOFFHCLnT44Nq6Fjjv_LrMMzOZe-wWvjpIZkVEw4tKwpU28pCwTyLxYy-rbnRbpcHWy4MZfgPwmSkOpe6sOqLt62yWlxrsBR7wJ6lNUnzuXFjtrfLWsWfx71gBMhM9ExbTtOw4qMl5jqMgR02BowBeFuVJfPzEE1MnFppixyaYQjdNwCuNEwCHU4LMLKCVCdYMwQ3woFwlF2f6PR-T0snXCvA7MF340iGY");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-white text-base font-medium leading-normal line-clamp-1">Good Morning, Alex!</p>
+<p class="text-[#90cbad] text-sm font-normal leading-normal line-clamp-2">You are currently checked out.</p>
+</div>
+</div>
+<!-- Spacer to push buttons down -->
+<div class="flex-grow"></div>
+<!-- Action Buttons -->
+<div class="flex flex-1 flex-col items-stretch gap-3 justify-end pb-8">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-[#10231a] text-base font-bold leading-normal tracking-[0.015em] w-full">
+<span class="truncate">Check In</span>
+</button>
+<button class="flex min-w-[84px] max-w-[480px] cursor-not-allowed items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-[#224936] text-[#6b8579] text-base font-bold leading-normal tracking-[0.015em] w-full" disabled="">
+<span class="truncate">Check Out</span>
+</button>
+</div>
+</div>
+<!-- Bottom Nav Bar -->
+<div class="flex gap-2 border-t border-[#224936] bg-[#183426] px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#90cbad]" href="#">
+<span class="material-symbols-outlined flex h-8 items-center justify-center text-2xl">home</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 rounded-full text-white" href="#">
+<span class="material-symbols-outlined flex h-8 items-center justify-center text-2xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Check-in</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#90cbad]" href="#">
+<span class="material-symbols-outlined flex h-8 items-center justify-center text-2xl">storefront</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Marketplace</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-[#90cbad]" href="#">
+<span class="material-symbols-outlined flex h-8 items-center justify-center text-2xl">bar_chart</span>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Stats</p>
+</a>
+</div>
+</div>
+<!-- Confirmation Modal Overlay -->
+<div class="absolute inset-0 z-10 flex items-center justify-center bg-black/60 p-4">
+<div class="flex w-full max-w-sm flex-col items-center gap-4 rounded-xl bg-[#183426] p-6 text-center shadow-lg">
+<div class="flex h-16 w-16 items-center justify-center rounded-full bg-primary">
+<span class="material-symbols-outlined text-4xl text-[#10231a]">check</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-xl font-bold text-white">Check-in Successful!</h3>
+<p class="text-sm text-[#90cbad]">Have a great workout!</p>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-11 px-5 bg-primary/20 text-primary text-base font-bold leading-normal tracking-[0.015em] mt-4">
+<span class="truncate">Done</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

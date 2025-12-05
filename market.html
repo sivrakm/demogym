@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gym Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0df280",
+              "background-light": "#f5f8f7",
+              "background-dark": "#102219",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex items-center p-4">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="User profile picture of a person working out" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVJ-XEXQ0M58f1NhKgToSWoiMfYloUu-Kp_l_Ef9WzU3qB1_V9j9WsQoap60MgGFYdj8Qod7ewu44uMAphUeGdv6R3-XwiW4rn2zVvZiXaFc5RM5oWoBTMeqKAcMcaSjViLTMwQso0f1ST3_Ldd6MB0C78lBoilscIen5vm6jTgPA2jELQR-u2_rRlNU-dV8gw8qVXiPSCQGNasGv85OfAKQQOoPJhZ4CwDLDd9ut0rhjq9ZrpniaueS0WF6ND-r-S_qbeHL6ZZBGv");'></div>
+</div>
+<h1 class="text-black dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Marketplace</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-black dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full">
+<div class="text-gray-500 dark:text-primary/70 flex border-none bg-gray-200 dark:bg-background-dark/50 items-center justify-center pl-4 rounded-l-xl border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-black dark:text-white focus:outline-0 focus:ring-0 border-none bg-gray-200 dark:bg-background-dark/50 focus:border-none h-full placeholder:text-gray-500 dark:placeholder:text-primary/70 px-4 pl-2 text-base font-normal leading-normal" placeholder="Search supplements, apparel..." value=""/>
+</div>
+</label>
+</div>
+<!-- Chips / Filters -->
+<div class="flex gap-3 px-4 pb-4 overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-200 dark:bg-background-dark/50 px-3">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Category</p>
+<span class="material-symbols-outlined text-black dark:text-white text-base">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-200 dark:bg-background-dark/50 px-3">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Price</p>
+<span class="material-symbols-outlined text-black dark:text-white text-base">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-200 dark:bg-background-dark/50 px-3">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Brand</p>
+<span class="material-symbols-outlined text-black dark:text-white text-base">expand_more</span>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-gray-200 dark:bg-background-dark/50 px-3">
+<p class="text-black dark:text-white text-sm font-medium leading-normal">Popularity</p>
+<span class="material-symbols-outlined text-black dark:text-white text-base">expand_more</span>
+</button>
+</div>
+<!-- Promotional Carousel -->
+<div class="flex overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-3">
+<div class="flex h-full w-72 flex-1 flex-col gap-4 rounded-xl bg-gray-200 dark:bg-[#183426] shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col" data-alt="Colorful tubs of protein powder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAi2yfk2IQq3UVMlL2aGTL77RGkcQ6T0qXsGRpdeQ-SYXGBAw4xflgB0OFk-JEOdGGSz-t5swFjsvIsneBeAwyC1HBqyX5W_vMYKGzRoz2lxpMOb6vwK5HdlGO1Mcc6O9dajyefQX570TCntRVtDGwFrJwtvB4W27wzPQM3dcPx-DGnggDEg1cNH6_LCCQv-bUSplQJ5s44f7Tvk-_mFlkmBCoLiSDLOhUXCmNA52Kyuk_aU4qi6d8J_gzXZzFlznrLRZ7mMYd-JUT");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">New Protein Flavors</p>
+<p class="text-gray-600 dark:text-primary/70 text-sm font-normal leading-normal">Discover the latest tastes</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Shop Now</span>
+</button>
+</div>
+</div>
+<div class="flex h-full w-72 flex-1 flex-col gap-4 rounded-xl bg-gray-200 dark:bg-[#183426] shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col" data-alt="Gym apparel hanging on a rack" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKO0q3SpGUp4MDEolY6Uoga8No63glY1z1qpZ4XzFd7qJZa9eg23DLfkHXoIUquvMjULGnxkOZzbYEelteIJhOn9NpgpyUeAV8w7Vy6WQiXlgRxj6S-HmqPLFECZKAiYgv1jIBgBh0TcfKMg0mjt1U8MpRwtI0w1IV_nubRdz7Mx1RjTyaMN-p7IQUMjmdyb65OzCIXDv9KpVq8LG0qv7pwZ-cJFYuOfbQSbzNGFeotVQIcN8Os9N25wBCoS2HtksqtF4Pg14v14Ys");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">20% Off All Apparel</p>
+<p class="text-gray-600 dark:text-primary/70 text-sm font-normal leading-normal">Limited time offer</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Shop Now</span>
+</button>
+</div>
+</div>
+<div class="flex h-full w-72 flex-1 flex-col gap-4 rounded-xl bg-gray-200 dark:bg-[#183426] shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-t-xl flex flex-col" data-alt="A personal trainer assisting a client with weights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAT2Y_OD-x7cUz-VdVXRapcPGwGb1-WeDvMckX3hecanf92TmRrnE-gbTIMHv4Qb8nPAR5orFCyJRuj1rmPmCU85Y19yM1u2z6bfZFlRrotZdsX5cUy-w5lGY-5xcukprLY51zZo81TlZR2Pl7AmCb_XtS-nXN4zVyI3UAl24cnlKPMaf0G43TxdB6IZs8Gl77HO33bu9NkZcr5nseXk4EFSV_0VJ0WST2VHbKzfsJIDtZTt0aK6eBeO-l0WrL3mXS3SPzoV94eLZ0M");'></div>
+<div class="flex flex-col flex-1 justify-between p-4 pt-0 gap-4">
+<div>
+<p class="text-black dark:text-white text-base font-medium leading-normal">Book a PT Session</p>
+<p class="text-gray-600 dark:text-primary/70 text-sm font-normal leading-normal">With our top trainers</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-black text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Shop Now</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Category Tabs -->
+<div class="pb-3 sticky top-16 z-10 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<div class="flex border-b border-gray-200 dark:border-primary/20 px-4 gap-6 overflow-x-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-b-primary pb-[13px] pt-4" href="#">
+<p class="text-black dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">Supplements</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-b-transparent text-gray-500 dark:text-primary/70 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Apparel</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-b-transparent text-gray-500 dark:text-primary/70 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Gear</p>
+</a>
+<a class="flex flex-col shrink-0 items-center justify-center border-b-[3px] border-b-transparent text-gray-500 dark:text-primary/70 pb-[13px] pt-4" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Training</p>
+</a>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-2 gap-4 p-4">
+<div class="flex flex-col gap-2">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl bg-gray-200 dark:bg-background-dark/50" data-alt="A black tub of whey protein with gold lettering" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWE19gtbeTqbJEDkmfDyuUn5A0HJLJt_FLNEMVHofRrRA9oqBNvipQ1vm-KKFOdtUvr9SOk4zGs_5vkspkXwSPd5TjV8UgpnZnD0GnamuFiZUmNBLbUsyed2Q9F-zPBs3jzBFGjq2U6nhp6hRBGhrYIghwVRUKCRGhfJRQlLevBp51Xf9TL242-Hof0jNv2nZ_8micQxqBJZ5F5VTJWrVQm17Ufk7AqBa3Ylw0xJll8MIAgRJ3e81pSiyBZWJc94ZGLUFIcTZY1AAz");'></div>
+<div class="flex flex-col">
+<p class="text-gray-500 dark:text-primary/70 text-xs font-medium">Protein Co.</p>
+<p class="text-black dark:text-white text-sm font-bold leading-tight">Whey Protein Isolate</p>
+<p class="text-black dark:text-white text-sm font-semibold">$59.99</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl bg-gray-200 dark:bg-background-dark/50" data-alt="A blue tub of pre-workout supplement" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDPwt9uIvZ9ptbttP1PGwyZKQxGHxl9x8un1G6nMMNpPUqwdbijpN2Im-IjNq_sCVo47tX0n1L3XWZ85GSqfsCPT1tav-Z3ZaitDHou7O0gfcPkskkNom0iwTlWBkzIPXxdcOcNjtzqjXXV50Kb-BOVwrssnDI6omx1-Qatd2wtMcjvHjBDPcfxlVeIP80z9DZgoJjcqYKfdw7s4ita_j7QUVux1qgoxl0ggljNC0wRM6RIC1DMtxPm4pQrdzYe7wOnYFf00j0PW41I");'></div>
+<div class="flex flex-col">
+<p class="text-gray-500 dark:text-primary/70 text-xs font-medium">Volt</p>
+<p class="text-black dark:text-white text-sm font-bold leading-tight">Pre-Workout Charge</p>
+<p class="text-black dark:text-white text-sm font-semibold">$39.99</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl bg-gray-200 dark:bg-background-dark/50" data-alt="A white tub of creatine monohydrate" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGWUJk8QzCm3-lLz7LMao1AiDEO8dXnV_p7D2CzYCYbzypey2bHOQLdoItCInLJvu89DRKcqznMk-1c1NtgF68DU_OR3ul0KeRRrJrQwAgTCFXqJQDZjVmS-xOmrG_CUN0Hc6chaTWLYvq1pGVUVOCtrLmdTe4upKTzUC9_07y7bo0kEGMA-j6tBmcgiNCAzovOLMUglE36Do9xczd5RAXkWV77UmPNtWNstgYkxc60oJZXpj2vuj8b6fiMZJpNQ8Bf51W93J5VOQL");'></div>
+<div class="flex flex-col">
+<p class="text-gray-500 dark:text-primary/70 text-xs font-medium">Pure Strength</p>
+<p class="text-black dark:text-white text-sm font-bold leading-tight">Creatine Monohydrate</p>
+<p class="text-black dark:text-white text-sm font-semibold">$24.99</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl bg-gray-200 dark:bg-background-dark/50" data-alt="A shaker bottle with a green lid" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLp34KEpT1hZ2QykI7Vpo1-LTiCZiHz2jCbJuHfu3KL7IKt-WZ6UKF1sqkU_o4fsGivRG9ITDrV73WaaQwHukEv2tGOeDQfQJTL1p13SoKgy8GlT1Zso3EaKtIHiQ4ieoaJp7VRTUbup8ltRhc5ZnnfojKLtL6sWwfkn_IDbJuUKmwrKoA7pCHc9uqIq62WfVWrNN41rxWtLIMYrtqqWa3HMuQbSmQo8aM9esF-IeRwDSk_mq9q4dr1P_1jKtMycuhM_c2XxT1SzHH");'></div>
+<div class="flex flex-col">
+<p class="text-gray-500 dark:text-primary/70 text-xs font-medium">ShakeIt</p>
+<p class="text-black dark:text-white text-sm font-bold leading-tight">Pro Shaker Bottle</p>
+<p class="text-black dark:text-white text-sm font-semibold">$12.99</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl bg-gray-200 dark:bg-background-dark/50" data-alt="A bottle of multivitamins for athletes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCb2p677abCnh_cbEQ8gMFDQ9tYCgPCpVDYCL6m6CDp1CO_rmUz2AEGXtKxbVm1QpSR7mD3iIRelOFyCT15EtKiBXH1uLJiEqzzc3EoWiE8IPBzDAg4ijSx0QdaJ1sDUEhHQwW0HeBmAxTHoh1-yW8eH9EA45CNpJF9rK2DFKmFpPSFHZBp9p5lJhxiKm2m3JcXwVdIW-Ovh9SEf-_srr9Udhf93cKt4ivHpNM2eGlQOlO05aAn_ldcT5HhmfbYtHQANprWDCwblS5w");'></div>
+<div class="flex flex-col">
+<p class="text-gray-500 dark:text-primary/70 text-xs font-medium">Health Pro</p>
+<p class="text-black dark:text-white text-sm font-bold leading-tight">Athlete's Multivitamin</p>
+<p class="text-black dark:text-white text-sm font-semibold">$29.99</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl bg-gray-200 dark:bg-background-dark/50" data-alt="A jar of vegan protein powder with a brown label" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCsw_icmt-CkorOUkDtnYbh4KK_lDt02TOigAmdgj7--tVak2UiKvMQQgiiAnssU5s-73ZA6lCDbNZeguG48F7WvmCAymGK-LXm-dwmNOwHsTPxy0FDwtvUZJTrXaNu2suxuTvzG3hoDLAq7tySzc_R9NRCCNaPY_GDJlXjwFqUm05bm9YvKbCQAxOfHNq6Lx9kpA6QxYhEaaTcceRqs3p-5RBg-DyF5v0BkL1AFALvQf3MEJjUdpPiTuoisW05jiLhlaV03J4WkxZ3");'></div>
+<div class="flex flex-col">
+<p class="text-gray-500 dark:text-primary/70 text-xs font-medium">Green Gainz</p>
+<p class="text-black dark:text-white text-sm font-bold leading-tight">Vegan Protein Blend</p>
+<p class="text-black dark:text-white text-sm font-semibold">$44.99</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

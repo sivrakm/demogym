@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>OTP Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#39E079",
+            "background-light": "#f6f8f7",
+            "background-dark": "#122017"
+          },
+          fontFamily: {
+            display: "Lexend"
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            lg: "1rem",
+            xl: "1.5rem",
+            full: "9999px"
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-zinc-900 dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden p-4">
+<div class="flex items-center pb-4">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h1 class="flex-1 text-center text-lg font-bold leading-tight tracking-[-0.015em] -ml-10">OTP Verification</h1>
+</div>
+<div class="flex flex-1 flex-col items-center justify-center text-center">
+<div class="flex w-full max-w-sm flex-col items-center">
+<div class="mb-6 flex size-20 items-center justify-center rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-4xl text-primary">phonelink_lock</span>
+</div>
+<h2 class="text-2xl font-bold tracking-tight">Enter OTP</h2>
+<p class="mt-2 text-zinc-500 dark:text-[#90cbad]">A 6-digit code has been sent to your phone number.</p>
+<div class="mt-8 flex w-full justify-center gap-2 sm:gap-4">
+<input class="h-14 w-12 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-[#183426] text-center text-2xl font-bold text-zinc-900 dark:text-white focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+<input class="h-14 w-12 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-[#183426] text-center text-2xl font-bold text-zinc-900 dark:text-white focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+<input class="h-14 w-12 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-[#183426] text-center text-2xl font-bold text-zinc-900 dark:text-white focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+<input class="h-14 w-12 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-[#183426] text-center text-2xl font-bold text-zinc-900 dark:text-white focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+<input class="h-14 w-12 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-[#183426] text-center text-2xl font-bold text-zinc-900 dark:text-white focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+<input class="h-14 w-12 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-[#183426] text-center text-2xl font-bold text-zinc-900 dark:text-white focus:border-primary focus:ring-primary" maxlength="1" type="number"/>
+</div>
+<div class="mt-6 flex items-center justify-center gap-1 text-sm">
+<p class="text-zinc-500 dark:text-[#90cbad]">Didn't receive code?</p>
+<button class="font-bold text-primary">Resend OTP</button>
+</div>
+</div>
+</div>
+<div class="w-full pb-4 pt-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-primary px-5 py-4 text-base font-bold leading-normal tracking-[0.015em] text-background-dark">
+<span class="truncate">Verify</span>
+</button>
+</div>
+</div>
+
+</body></html>

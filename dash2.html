@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gym Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {primary: "#39E079", "background-light": "#f6f8f7", "background-dark": "#122017"}, fontFamily: {display: "Lexend"}, borderRadius: {DEFAULT: "0.5rem", lg: "1rem", xl: "1.5rem", full: "9999px"}}}};</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<h2 class="text-zinc-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1">Dashboard</h2>
+<div class="flex size-10 shrink-0 items-center justify-center rounded-full bg-zinc-200 dark:bg-zinc-700">
+<span class="material-symbols-outlined text-zinc-900 dark:text-white">person</span>
+</div>
+</div>
+<!-- Headline & Meta Text -->
+<h1 class="text-zinc-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight px-4 text-left pb-1 pt-4">Hello, User!</h1>
+<p class="text-zinc-500 dark:text-[#90cbad] text-sm font-normal leading-normal pb-3 pt-1 px-4">You are checked out</p>
+<!-- Primary Action Card (QR Code) -->
+<div class="px-4 pb-4 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white dark:bg-[#183426]">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-contain bg-white rounded-t-xl" data-alt="A scannable QR code for gym access" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAFjeE7j2lCfdlBM2ws23PqsKGy5bCd650GBxRZEBjw78ZahheETNrne1T6k00_mOZ2ydF0Ydm4tDQVNS7kzuzqeZa8bBJwdb-XTiu_nXGv9WYTUpcjhLYWouseC0OYFLVW_dlJvKSxMwwPwX3hnwKGEjcCTTVJaMMj_APcusRQAaNlTN3TQBEUbX4wDpQbxKtArjqY_XhlxwcKij8NLv8kD7ePQM46IV2UWukp1bhNql2W-_U23tAZvE_ZFF5Uj3yCpnil1fcMWroG"); background-position: center; background-size: 80%;'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4 pt-2">
+<p class="text-zinc-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Scan to Enter</p>
+<p class="text-zinc-600 dark:text-[#90cbad] text-base font-normal leading-normal">Present this QR code at the front desk for gym access.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-3 px-4 pb-4">
+<button class="flex flex-1 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Check-In</span>
+</button>
+<button class="flex flex-1 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-zinc-200 dark:bg-[#224936] text-zinc-900 dark:text-white text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Check-Out</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Feature Grid -->
+<div class="grid grid-cols-2 gap-4 px-4 pb-24">
+<!-- Machine Enrollment Card -->
+<div class="flex flex-col items-start justify-between rounded-xl p-4 bg-white dark:bg-[#183426] aspect-square">
+<div>
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/20 mb-3">
+<span class="material-symbols-outlined text-primary text-2xl">fitness_center</span>
+</div>
+<p class="text-zinc-900 dark:text-white text-base font-bold leading-tight tracking-[-0.015em]">Enroll Machine</p>
+<p class="text-zinc-600 dark:text-[#90cbad] text-sm font-normal leading-normal mt-1">Reserve your spot</p>
+</div>
+</div>
+<!-- Health Stats Card -->
+<div class="flex flex-col items-start justify-between rounded-xl p-4 bg-white dark:bg-[#183426] aspect-square">
+<div>
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/20 mb-3">
+<span class="material-symbols-outlined text-primary text-2xl">show_chart</span>
+</div>
+<p class="text-zinc-900 dark:text-white text-base font-bold leading-tight tracking-[-0.015em]">My Health Stats</p>
+<p class="text-zinc-600 dark:text-[#90cbad] text-sm font-normal leading-normal mt-1">View your BMI</p>
+</div>
+</div>
+<!-- Marketplace Card -->
+<div class="flex flex-col items-start justify-between rounded-xl p-4 bg-white dark:bg-[#183426] aspect-square">
+<div>
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/20 mb-3">
+<span class="material-symbols-outlined text-primary text-2xl">shopping_cart</span>
+</div>
+<p class="text-zinc-900 dark:text-white text-base font-bold leading-tight tracking-[-0.015em]">Marketplace</p>
+<p class="text-zinc-600 dark:text-[#90cbad] text-sm font-normal leading-normal mt-1">Shop supplements</p>
+</div>
+</div>
+<!-- Workout Log Card -->
+<div class="flex flex-col items-start justify-between rounded-xl p-4 bg-white dark:bg-[#183426] aspect-square">
+<div>
+<div class="flex items-center justify-center size-12 rounded-full bg-primary/20 mb-3">
+<span class="material-symbols-outlined text-primary text-2xl">list_alt</span>
+</div>
+<p class="text-zinc-900 dark:text-white text-base font-bold leading-tight tracking-[-0.015em]">My Workouts</p>
+<p class="text-zinc-600 dark:text-[#90cbad] text-sm font-normal leading-normal mt-1">Log your activity</p>
+</div>
+</div>
+</div>
+<!-- Bottom Tab Bar -->
+<div class="fixed bottom-0 left-0 right-0 h-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg border-t border-zinc-200 dark:border-zinc-800">
+<div class="flex justify-around items-center h-full max-w-lg mx-auto px-4">
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<p class="text-xs text-primary font-bold">Dashboard</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-zinc-500 dark:text-zinc-400">calendar_month</span>
+<p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Schedule</p>
+</div>
+<div class="flex flex-col items-center gap-1">
+<span class="material-symbols-outlined text-zinc-500 dark:text-zinc-400">person</span>
+<p class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">Profile</p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

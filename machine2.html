@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Machine Enrollment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df280",
+                        "background-light": "#f5f8f7",
+                        "background-dark": "#102219",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 flex flex-col bg-background-light dark:bg-background-dark pt-4">
+<div class="flex items-center px-4 pb-2">
+<div class="flex size-12 shrink-0 items-center justify-start text-black dark:text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</div>
+<h1 class="flex-1 text-center text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">Enrollment</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-gray-900 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">tune</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-4 pt-2">
+<!-- Segmented Buttons -->
+<div class="flex">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-gray-200 dark:bg-[#183426] p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 text-gray-600 dark:text-primary/70 has-[:checked]:bg-background-light has-[:checked]:dark:bg-background-dark has-[:checked]:text-gray-900 has-[:checked]:dark:text-white text-sm font-medium leading-normal has-[:checked]:shadow-sm">
+<span class="truncate">Machines</span>
+<input checked="" class="invisible w-0" name="enrollment-type" type="radio" value="Machines"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-md px-2 text-gray-600 dark:text-primary/70 has-[:checked]:bg-background-light has-[:checked]:dark:bg-background-dark has-[:checked]:text-gray-900 has-[:checked]:dark:text-white text-sm font-medium leading-normal has-[:checked]:shadow-sm">
+<span class="truncate">Classes</span>
+<input class="invisible w-0" name="enrollment-type" type="radio" value="Classes"/>
+</label>
+</div>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 pb-1">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="flex items-center justify-center rounded-l-lg border border-r-0 border-gray-300 bg-gray-100 pl-4 text-gray-500 dark:border-primary/30 dark:bg-[#183426] dark:text-primary/70">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg border border-l-0 border-gray-300 bg-gray-100 px-4 text-base font-normal leading-normal text-gray-900 placeholder:text-gray-500 focus:outline-0 focus:ring-0 dark:border-primary/30 dark:bg-[#183426] dark:text-white dark:placeholder:text-primary/70" placeholder="Search for machines..." value=""/>
+</div>
+</label>
+</div>
+<!-- Date Chips -->
+<div class="flex gap-3 px-4 py-3 overflow-x-auto">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary pl-4 pr-4"><p class="text-black text-sm font-medium leading-normal">Mon</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-[#183426] pl-4 pr-4"><p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Tue</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-[#183426] pl-4 pr-4"><p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Wed</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-[#183426] pl-4 pr-4"><p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Thu</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-[#183426] pl-4 pr-4"><p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Fri</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-[#183426] pl-4 pr-4"><p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Sat</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-[#183426] pl-4 pr-4"><p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Sun</p></div>
+</div>
+<!-- Machine Cards List -->
+<div class="flex flex-col gap-4 px-4 pb-4">
+<!-- Card 1: Available -->
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-gray-100 dark:bg-[#183426] p-4 shadow-sm">
+<div class="flex flex-[2_2_0px] flex-col gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-green-500 dark:text-green-400 text-sm font-medium leading-normal">Available</p>
+<p class="text-gray-900 dark:text-white text-base font-bold leading-tight">Treadmill</p>
+<p class="text-gray-500 dark:text-primary/70 text-sm font-normal leading-normal">Cardio</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 w-fit bg-primary text-black text-sm font-bold leading-normal">
+<span class="truncate">Book Slot</span>
+</button>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1" data-alt="A modern treadmill in a well-lit gym setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3BqOUWEhETS0TK-nPkJo0rxAdNUPrr_12kWYUtN5RpYigU0OpRkNj5qnvFdmMSm0wBtZL0nBchHW1QksH1XqP0wyugwpWzgGFss1TIcUNaE9Vo3pK6SveK0oXMYIilMjLRNQRu1PismKfB3sQWBx3Y2wo-iqYSLQzTaMmJDbuIT6e-7TC3t97rxiwqVlF5TpNKeXzGUbmeVXVYefjSf9aTor85hx6u8iQhHJfu1tej3N6vbe2N4gRGdg6cEm_EB7dTuuxtCZHuE1T");'></div>
+</div>
+<!-- Card 2: In Use -->
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-gray-100 dark:bg-[#183426] p-4 shadow-sm">
+<div class="flex flex-[2_2_0px] flex-col gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-red-500 dark:text-red-400 text-sm font-medium leading-normal">In Use</p>
+<p class="text-gray-900 dark:text-white text-base font-bold leading-tight">Leg Press</p>
+<p class="text-gray-500 dark:text-primary/70 text-sm font-normal leading-normal">Strength</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-not-allowed items-center justify-center overflow-hidden rounded-lg h-8 px-4 w-fit bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-400 text-sm font-bold leading-normal" disabled="">
+<span class="truncate">Unavailable</span>
+</button>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1" data-alt="A leg press machine ready for use in a gym" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCPXiTjN7UPmxLulWRCwtausHx-d0KEtWQ2HH5c-RNHgJY5syK38hCt4WE7qNSHEcT2l8LzZErDhPQwFXHgM3MxgpULzhdqPOwPxwHAXrTablOQCOUOLWxk1NilYk5kZYAIIAfgzmu4VN9AzWiVxF3nmo0mtQoM_6ksLjhuTF0NHThuF4D5kHi9Qhx3Ls0GkAiQQLndZpNW6SnIbEEZEbxarzzTKoPJ_xg2r6ZnjuNySq3gSo-JNazaveUv1mpOX3a_OnCWB482F5FA");'></div>
+</div>
+<!-- Card 3: Available -->
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-gray-100 dark:bg-[#183426] p-4 shadow-sm">
+<div class="flex flex-[2_2_0px] flex-col gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-green-500 dark:text-green-400 text-sm font-medium leading-normal">Available</p>
+<p class="text-gray-900 dark:text-white text-base font-bold leading-tight">Elliptical</p>
+<p class="text-gray-500 dark:text-primary/70 text-sm font-normal leading-normal">Cardio</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 w-fit bg-primary text-black text-sm font-bold leading-normal">
+<span class="truncate">Book Slot</span>
+</button>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1" data-alt="Side view of an elliptical cross-trainer machine" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUsM-6K27OBMXW_noR7IEzZWIT7azcsIGI-KxbqdBrKJH26v-rMXpwuT9fC1NqI_1xO5VnMQIfEN0ivlHJaE80e-FnpXo3geObrQY6Hx5RZefPG-FkC2oSAbUGtS3IGNrfrbBhmXk7rL5robv8QTHjVy_2Bwq4zolTj8RTnob7GqOlacZ0Ms6_3BoSxRBQB13h-x8XeoUYCJpaOFGnXbDQe1cWxGYdberwRY3yv4weqXtpNtIRGrXBySA3KktofrJ9YCED6rbwioks");'></div>
+</div>
+</div>
+</div>
+</body></html>
