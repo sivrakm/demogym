@@ -22,6 +22,12 @@
     body {
       min-height: max(884px, 100dvh);
     }
+    .bg-overlay::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.2); /* darkness level */
+    }
   </style>
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display">
@@ -40,7 +46,7 @@
 <div class="px-4 pb-4 @container">
 <a href="./checkin.html">
 <div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white dark:bg-[#183426]">
-<div class="w-full bg-center bg-no-repeat aspect-square bg-contain bg-white rounded-t-xl" data-alt="A scannable QR code for gym access" style='background-image: url("./QRCode.png"); background-position: center; background-size: 70%;'></div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-contain bg-white rounded-t-xl bg-overlay" data-alt="A scannable QR code for gym access" style='background-image: url("./QRCode.png"); background-position: center; background-size: 70%;'></div>
 <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4 pt-2">
 <p class="text-zinc-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Scan to Enter</p>
 <p class="text-zinc-600 dark:text-[#90cbad] text-base font-normal leading-normal">Present this QR code at the front desk for gym access.</p>
