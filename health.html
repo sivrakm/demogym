@@ -48,17 +48,126 @@
 <div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
 <div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
 <div class="flex size-12 shrink-0 items-center justify-start text-zinc-900 dark:text-white">
-<span class="material-symbols-outlined text-3xl">bar_chart_4_bars</span>
+<a href="./dash2.html"><span class="material-symbols-outlined text-3xl">bar_chart_4_bars</span></a>
 </div>
 <h1 class="text-zinc-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Health Statistics</h1>
 <div class="flex w-12 items-center justify-end">
 <button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 bg-transparent text-zinc-900 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
-<span class="material-symbols-outlined text-2xl">settings</span>
+<a href="./dash2.html"><span class="material-symbols-outlined text-2xl">settings</span></a>
 </button>
 </div>
 </div>
 <main class="flex-1 pb-24">
-<div class="p-4 @container">
+<div class="p-4 @container" style="padding-top: 10px;">
+<div style="padding-bottom: 15px;">
+<h2 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Muscle Engagement</h2>
+<div class="rounded-xl bg-gray-100 dark:bg-[#183426] p-4">
+<div class="flex justify-between items-center mb-4">
+<p class="text-gray-900 dark:text-white font-semibold">Primary Muscle Groups</p>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-background-dark px-3"><p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Last 30 Days</p><span class="material-symbols-outlined text-sm">expand_more</span></div>
+</div>
+<div class="flex items-center justify-center">
+<img alt="Diagram of a human body highlighting muscle groups" class="max-h-80 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbXsTVlfjyieXekfwZUvRNb84Q3PCTwfSNtN048caADGDp686KUMontrxmSLoSAY-S_zi6j_uDUBxmCdTE2NfZWFjuDRIo788Jn6AEfOomm-3IesZ6UTa7rSOUsvic_TCrFvX1QKLzLg1Xl-0DeyzV6s_80Gr1y0-JrOnInS_P0tiKqXSghY7WZ5jc1WViL2hltPTn1NjnF8QkShor6jUPeBKq8H0osNwDU4FNTXz8_z4WqFrYcGpsqKKkiVnkbSf9q5ahoIh8OeQp"/>
+</div>
+<div class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-[#0df280]"></div>
+<span class="text-gray-900 dark:text-white">Legs (Quads, Hamstrings)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-[#0aa859]"></div>
+<span class="text-gray-900 dark:text-white">Glutes</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-[#6db592]"></div>
+<span class="text-gray-900 dark:text-white">Core</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-3 rounded-full bg-[#a3d6be]"></div>
+<span class="text-gray-900 dark:text-white">Calves</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-xl bg-zinc-200 dark:bg-[#224936] p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-zinc-500 has-[:checked]:bg-white dark:text-[#90cbad] dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-zinc-900 dark:has-[:checked]:text-white text-sm font-medium leading-normal">
+<span class="truncate">1M</span>
+<input class="invisible w-0" name="time-period" type="radio" value="1M"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-zinc-500 has-[:checked]:bg-white dark:text-[#90cbad] dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-zinc-900 dark:has-[:checked]:text-white text-sm font-medium leading-normal">
+<span class="truncate">3M</span>
+<input checked="" class="invisible w-0" name="time-period" type="radio" value="3M"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-zinc-500 has-[:checked]:bg-white dark:text-[#90cbad] dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-zinc-900 dark:has-[:checked]:text-white text-sm font-medium leading-normal">
+<span class="truncate">6M</span>
+<input class="invisible w-0" name="time-period" type="radio" value="6M"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-zinc-500 has-[:checked]:bg-white dark:text-[#90cbad] dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-zinc-900 dark:has-[:checked]:text-white text-sm font-medium leading-normal">
+<span class="truncate">1Y</span>
+<input class="invisible w-0" name="time-period" type="radio" value="1Y"/>
+</label>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 px-4 py-2">
+<div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-zinc-200 dark:border-[#31684d] bg-white dark:bg-[#183426] p-6">
+<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal">BMI Trend</p>
+<p class="text-zinc-900 dark:text-white tracking-light text-[32px] font-bold leading-tight truncate">22.5</p>
+<div class="flex gap-1">
+<p class="text-zinc-500 dark:text-[#90cbad] text-base font-normal leading-normal">Last 3 Months</p>
+<p class="text-red-500 dark:text-[#fa5538] text-base font-medium leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-base">arrow_downward</span> -1.2%
+                        </p>
+</div>
+<div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
+<svg fill="none" height="148" preserveAspectRatio="none" viewBox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z" fill="url(#paint0_linear_1131_5935)"></path>
+<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#0df280" stroke-linecap="round" stroke-width="3"></path>
+<defs>
+<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1131_5935" x1="236" x2="236" y1="1" y2="149">
+<stop stop-color="#0df280" stop-opacity="0.3"></stop>
+<stop offset="1" stop-color="#0df280" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg>
+<div class="flex justify-around">
+<p class="text-zinc-500 dark:text-[#90cbad] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun</p>
+<p class="text-zinc-500 dark:text-[#90cbad] text-[13px] font-bold leading-normal tracking-[0.015em]">Jul</p>
+<p class="text-zinc-500 dark:text-[#90cbad] text-[13px] font-bold leading-normal tracking-[0.015em]">Aug</p>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 p-4">
+<div class="flex flex-col gap-2 rounded-xl p-4 border border-zinc-200 dark:border-[#31684d] bg-white dark:bg-[#183426]">
+<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal">Weight</p>
+<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">75 kg</p>
+<p class="text-red-500 dark:text-[#fa5538] text-sm font-medium leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">arrow_downward</span> -1.2kg
+                    </p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-4 border border-zinc-200 dark:border-[#31684d] bg-white dark:bg-[#183426]">
+<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal">Body Fat</p>
+<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">18%</p>
+<p class="text-red-500 dark:text-[#fa5538] text-sm font-medium leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">arrow_downward</span> -0.5%
+                    </p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-4 border border-zinc-200 dark:border-[#31684d] bg-white dark:bg-[#183426]">
+<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal">Muscle Mass</p>
+<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">40 kg</p>
+<p class="text-green-500 dark:text-[#0bda46] text-sm font-medium leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">arrow_upward</span> +0.2kg
+                    </p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-4 border border-zinc-200 dark:border-[#31684d] bg-white dark:bg-[#183426]">
+<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal">Water %</p>
+<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">60%</p>
+<p class="text-green-500 dark:text-[#0bda46] text-sm font-medium leading-normal flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">arrow_upward</span> +0.1%
+                    </p>
+</div>
+</div>
 <div class="flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-[#183426] @xl:flex-row @xl:items-start shadow-sm">
 <div class="relative flex aspect-square w-full items-center justify-center p-6 @xl:w-64">
 <svg class="absolute inset-0 h-full w-full" viewBox="0 0 100 100">
@@ -145,90 +254,13 @@
 </div>
 </div>
 </div>
-<div class="flex px-4 py-3">
-<div class="flex h-10 flex-1 items-center justify-center rounded-xl bg-zinc-200 dark:bg-[#224936] p-1">
-<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-zinc-500 has-[:checked]:bg-white dark:text-[#90cbad] dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-zinc-900 dark:has-[:checked]:text-white text-sm font-medium leading-normal">
-<span class="truncate">1M</span>
-<input class="invisible w-0" name="time-period" type="radio" value="1M"/>
-</label>
-<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-zinc-500 has-[:checked]:bg-white dark:text-[#90cbad] dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-zinc-900 dark:has-[:checked]:text-white text-sm font-medium leading-normal">
-<span class="truncate">3M</span>
-<input checked="" class="invisible w-0" name="time-period" type="radio" value="3M"/>
-</label>
-<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-zinc-500 has-[:checked]:bg-white dark:text-[#90cbad] dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-zinc-900 dark:has-[:checked]:text-white text-sm font-medium leading-normal">
-<span class="truncate">6M</span>
-<input class="invisible w-0" name="time-period" type="radio" value="6M"/>
-</label>
-<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-zinc-500 has-[:checked]:bg-white dark:text-[#90cbad] dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-zinc-900 dark:has-[:checked]:text-white text-sm font-medium leading-normal">
-<span class="truncate">1Y</span>
-<input class="invisible w-0" name="time-period" type="radio" value="1Y"/>
-</label>
-</div>
-</div>
-<div class="flex flex-wrap gap-4 px-4 py-2">
-<div class="flex min-w-72 flex-1 flex-col gap-2 rounded-xl border border-zinc-200 dark:border-[#31684d] bg-white dark:bg-[#183426] p-6">
-<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal">BMI Trend</p>
-<p class="text-zinc-900 dark:text-white tracking-light text-[32px] font-bold leading-tight truncate">22.5</p>
-<div class="flex gap-1">
-<p class="text-zinc-500 dark:text-[#90cbad] text-base font-normal leading-normal">Last 3 Months</p>
-<p class="text-red-500 dark:text-[#fa5538] text-base font-medium leading-normal flex items-center gap-1">
-<span class="material-symbols-outlined text-base">arrow_downward</span> -1.2%
-                        </p>
-</div>
-<div class="flex min-h-[180px] flex-1 flex-col gap-8 py-4">
-<svg fill="none" height="148" preserveAspectRatio="none" viewBox="-3 0 478 150" width="100%" xmlns="http://www.w3.org/2000/svg">
-<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25V149H326.769H0V109Z" fill="url(#paint0_linear_1131_5935)"></path>
-<path d="M0 109C18.1538 109 18.1538 21 36.3077 21C54.4615 21 54.4615 41 72.6154 41C90.7692 41 90.7692 93 108.923 93C127.077 93 127.077 33 145.231 33C163.385 33 163.385 101 181.538 101C199.692 101 199.692 61 217.846 61C236 61 236 45 254.154 45C272.308 45 272.308 121 290.462 121C308.615 121 308.615 149 326.769 149C344.923 149 344.923 1 363.077 1C381.231 1 381.231 81 399.385 81C417.538 81 417.538 129 435.692 129C453.846 129 453.846 25 472 25" stroke="#0df280" stroke-linecap="round" stroke-width="3"></path>
-<defs>
-<linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_1131_5935" x1="236" x2="236" y1="1" y2="149">
-<stop stop-color="#0df280" stop-opacity="0.3"></stop>
-<stop offset="1" stop-color="#0df280" stop-opacity="0"></stop>
-</linearGradient>
-</defs>
-</svg>
-<div class="flex justify-around">
-<p class="text-zinc-500 dark:text-[#90cbad] text-[13px] font-bold leading-normal tracking-[0.015em]">Jun</p>
-<p class="text-zinc-500 dark:text-[#90cbad] text-[13px] font-bold leading-normal tracking-[0.015em]">Jul</p>
-<p class="text-zinc-500 dark:text-[#90cbad] text-[13px] font-bold leading-normal tracking-[0.015em]">Aug</p>
-</div>
-</div>
-</div>
-</div>
-<div class="grid grid-cols-2 gap-4 p-4">
-<div class="flex flex-col gap-2 rounded-xl p-4 border border-zinc-200 dark:border-[#31684d] bg-white dark:bg-[#183426]">
-<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal">Weight</p>
-<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">75 kg</p>
-<p class="text-red-500 dark:text-[#fa5538] text-sm font-medium leading-normal flex items-center gap-1">
-<span class="material-symbols-outlined text-sm">arrow_downward</span> -1.2kg
-                    </p>
-</div>
-<div class="flex flex-col gap-2 rounded-xl p-4 border border-zinc-200 dark:border-[#31684d] bg-white dark:bg-[#183426]">
-<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal">Body Fat</p>
-<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">18%</p>
-<p class="text-red-500 dark:text-[#fa5538] text-sm font-medium leading-normal flex items-center gap-1">
-<span class="material-symbols-outlined text-sm">arrow_downward</span> -0.5%
-                    </p>
-</div>
-<div class="flex flex-col gap-2 rounded-xl p-4 border border-zinc-200 dark:border-[#31684d] bg-white dark:bg-[#183426]">
-<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal">Muscle Mass</p>
-<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">40 kg</p>
-<p class="text-green-500 dark:text-[#0bda46] text-sm font-medium leading-normal flex items-center gap-1">
-<span class="material-symbols-outlined text-sm">arrow_upward</span> +0.2kg
-                    </p>
-</div>
-<div class="flex flex-col gap-2 rounded-xl p-4 border border-zinc-200 dark:border-[#31684d] bg-white dark:bg-[#183426]">
-<p class="text-zinc-900 dark:text-white text-base font-medium leading-normal">Water %</p>
-<p class="text-zinc-900 dark:text-white tracking-light text-2xl font-bold leading-tight">60%</p>
-<p class="text-green-500 dark:text-[#0bda46] text-sm font-medium leading-normal flex items-center gap-1">
-<span class="material-symbols-outlined text-sm">arrow_upward</span> +0.1%
-                    </p>
-</div>
-</div>
 </main>
 <div class="fixed bottom-6 right-6">
+<a href="./dash2.html">
 <button class="flex h-16 w-16 cursor-pointer items-center justify-center rounded-full bg-primary text-background-dark shadow-lg">
-<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 600;">add</span>
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'wght' 600;">arrow_back</span>
 </button>
+</a>
 </div>
 </div>
 </body></html>
