@@ -32,7 +32,10 @@
 
   function startScanner() {
     document.getElementById("qr-reader").style.display = "block";
-    
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
     qrScanner = new Html5Qrcode("qr-reader");
     setTimeout(() => {
       document.getElementById("qr-reader").focus();
