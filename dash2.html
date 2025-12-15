@@ -23,17 +23,41 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+  <script src="https://unpkg.com/html5-qrcode"></script>
   <script>
-  function openCamera() {
-    document.getElementById('cameraInput').click();
-  }
-  
-  document.getElementById('cameraInput').addEventListener('change', function () {
-    if (this.files && this.files.length > 0) {
-      window.location.href = "https://sivrakm.github.io/demogym/checkin.html";
-    }
-  });
+  // https://sivrakm.github.io/demogym/checkin.html
   </script>
+  <script>
+  let qrScanner;
+
+  function startScanner() {
+    document.getElementById("qr-reader").style.display = "block";
+    
+    qrScanner = new Html5Qrcode("qr-reader");
+    setTimeout(() => {
+      document.getElementById("qr-reader").focus();
+    }, 1000);
+    qrScanner.start(
+      { facingMode: "environment" }, // rear camera
+      {
+        fps: 10,
+        qrbox: 250
+      },
+      (decodedText) => {
+        console.log("QR Code:", decodedText);
+
+        // ✅ Stop camera
+        qrScanner.stop();
+
+        // 🔁 Redirect after scan
+        window.location.href = "https://sivrakm.github.io/demogym/checkin.html";
+      },
+      (errorMessage) => {
+        // scan errors ignored
+      }
+    );
+  }
+</script>
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display">
 <input
@@ -56,7 +80,8 @@ style="display:none"
 <p class="text-zinc-500 dark:text-[#90cbad] text-sm font-normal leading-normal pb-3 pt-1 px-4">You are checked out</p>
 <!-- Primary Action Card (QR Code) -->
 <div class="px-4 pb-4 @container">
-<a  onclick="openCamera()">
+<a onclick="startScanner()">
+<div id="qr-reader" style="width:100%; display:none; margin-bottom: -15px;"></div>
 <div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white dark:bg-[#183426]">
 <div class="w-full bg-center bg-no-repeat aspect-square bg-contain bg-white rounded-t-xl bg-overlay" data-alt="A scannable QR code for gym access" style='background-image: url("./QRCode.png"); background-position: center; background-size: 70%;'></div>
 <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4 pt-2">
