@@ -23,8 +23,26 @@
       min-height: max(884px, 100dvh);
     }
   </style>
+  <script>
+  function openCamera() {
+    document.getElementById('cameraInput').click();
+  }
+  
+  document.getElementById('cameraInput').addEventListener('change', function () {
+    if (this.files && this.files.length > 0) {
+      window.location.href = "https://sivrakm.github.io/demogym/checkin.html";
+    }
+  });
+  </script>
   </head>
 <body class="bg-background-light dark:bg-background-dark font-display">
+<input
+type="file"
+accept="image/*"
+capture="environment"
+id="cameraInput"
+style="display:none"
+/>
 <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
 <!-- Top App Bar -->
 <div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
@@ -38,7 +56,7 @@
 <p class="text-zinc-500 dark:text-[#90cbad] text-sm font-normal leading-normal pb-3 pt-1 px-4">You are checked out</p>
 <!-- Primary Action Card (QR Code) -->
 <div class="px-4 pb-4 @container">
-<a href="./checkin.html">
+<a  onclick="openCamera()">
 <div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white dark:bg-[#183426]">
 <div class="w-full bg-center bg-no-repeat aspect-square bg-contain bg-white rounded-t-xl bg-overlay" data-alt="A scannable QR code for gym access" style='background-image: url("./QRCode.png"); background-position: center; background-size: 70%;'></div>
 <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4 pt-2">
@@ -46,7 +64,7 @@
 <p class="text-zinc-600 dark:text-[#90cbad] text-base font-normal leading-normal">Present this QR code at the front desk for gym access.</p>
 </div>
 <div class="flex flex-col sm:flex-row gap-3 px-4 pb-4">
-<button style="padding: 10px;" class="flex flex-1 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em]">
+<button  onclick="openCamera()" style="padding: 10px;" class="flex flex-1 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-primary text-background-dark text-base font-bold leading-normal tracking-[0.015em]">
 <span class="truncate">Scan Now</span>
 </button>
 <!-- <button class="flex flex-1 min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-zinc-200 dark:bg-[#224936] text-zinc-900 dark:text-white text-base font-bold leading-normal tracking-[0.015em]">
@@ -61,7 +79,7 @@
 <!-- Machine Enrollment Card -->
 <div class="flex flex-col items-start justify-between rounded-xl p-4 bg-white dark:bg-[#183426] aspect-square">
 <div>
-<a href="./checkin.html">
+<a onclick="openCamera()">
 <div class="flex items-center justify-center size-12 rounded-full bg-primary/20 mb-3">
 <span class="material-symbols-outlined text-primary text-2xl">fitness_center</span>
 </div>
