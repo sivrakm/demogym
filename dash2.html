@@ -22,6 +22,12 @@
     body {
       min-height: max(884px, 100dvh);
     }
+    
+    #qr-reader {
+      video {
+        border-radius: 10px 10px 0px 0px;
+      }
+    }
   </style>
   <script src="https://unpkg.com/html5-qrcode"></script>
   <script>
@@ -84,7 +90,7 @@ style="display:none"
 <!-- Primary Action Card (QR Code) -->
 <div class="px-4 pb-4 @container">
 <a onclick="startScanner()">
-<div id="qr-reader" style="width:100%; display:none; margin-bottom: -15px;"></div>
+<div id="qr-reader" style="width:100%; display:none; margin-bottom: -18px; margin-top: 6px;"></div>
 <div class="flex flex-col items-stretch justify-start rounded-xl shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white dark:bg-[#183426]">
 <div class="w-full bg-center bg-no-repeat aspect-square bg-contain bg-white rounded-t-xl bg-overlay" data-alt="A scannable QR code for gym access" style='background-image: url("./QRCode.png"); background-position: center; background-size: 70%;'></div>
 <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4 pt-2">
