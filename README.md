@@ -16,7 +16,7 @@
 - [attendance](https://sivrakm.github.io/demogym/v2/attendance)
 - [dashboard](https://sivrakm.github.io/demogym/v2/dashboard)
 - [login_screen](https://sivrakm.github.io/demogym/v2/login_screen)
-- [login_screen_phone_only](https://sivrakm.github.io/demogym/login_screen_phone_only)
+- [login_screen_phone_only](https://sivrakm.github.io/demogym/v2/login_screen_phone_only)
 - [memberlist](https://sivrakm.github.io/demogym/v2/memberlist)
 - [memberprofile](https://sivrakm.github.io/demogym/v2/memberprofile)
 - [paymentdue](https://sivrakm.github.io/demogym/v2/paymentdue)
