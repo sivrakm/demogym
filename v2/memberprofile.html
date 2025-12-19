@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Member Profile</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df259",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                        "surface-dark": "#1a2c20", // Custom surface color for cards
+                        "surface-highlight": "#23392a",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen flex flex-col overflow-x-hidden antialiased selection:bg-primary selection:text-background-dark">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-black/5 dark:border-white/5">
+<div class="flex items-center justify-between px-4 h-16">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Member Profile</h1>
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">more_horiz</span>
+</button>
+</div>
+</header>
+<!-- Main Scrollable Content -->
+<main class="flex-1 pb-24">
+<!-- Profile Header -->
+<section class="pt-6 pb-4 px-4 flex flex-col items-center">
+<div class="relative mb-4 group cursor-pointer">
+<div class="w-28 h-28 rounded-full overflow-hidden border-2 border-primary shadow-[0_0_15px_-3px_rgba(13,242,89,0.3)]">
+<img alt="Portrait of a fit young man looking determined in a gym setting" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASWKhC5EEU3PlsN5wvjo8LgfsqkrxxHHmSvRyLcBr-TZxw9lRTWGElwchMH8mrfd67snljk6GdXqmPvuLFg2tvqY_ZXfjPPmp-dzNWMmqh0czqOFrPoAJWg84siMpBekOcasjdmpawSJCGP9o2d4HpCSs2QBwmsrZwg8xPRlYeGfpTaZ_IbEuodS6Nsxl9mzQEYFOf0Z0amtn3Ar4F79vnS1ZZ_DvVxG7iTSVbUzqqvMy9hactMSwTjbOYqvjclYndN5A6Xq49c5ew"/>
+</div>
+<div class="absolute bottom-0 right-0 bg-background-dark rounded-full p-1 border border-white/10">
+<div class="bg-primary text-background-dark rounded-full w-8 h-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</div>
+</div>
+</div>
+<h2 class="text-2xl font-bold text-center mb-1">Alex Johnson</h2>
+<div class="flex items-center gap-2 mb-4">
+<span class="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold uppercase tracking-wider border border-primary/20">Active Member</span>
+<span class="text-sm text-slate-500 dark:text-gray-400">Since Jan 2023</span>
+</div>
+<!-- Quick Stats Row (Mini) -->
+<div class="flex items-center gap-6 text-center">
+<div>
+<p class="text-lg font-bold text-slate-900 dark:text-white">45</p>
+<p class="text-xs text-slate-500 dark:text-gray-500 uppercase tracking-wide">Visits</p>
+</div>
+<div class="w-px h-8 bg-black/10 dark:bg-white/10"></div>
+<div>
+<p class="text-lg font-bold text-slate-900 dark:text-white">12</p>
+<p class="text-xs text-slate-500 dark:text-gray-500 uppercase tracking-wide">Streak</p>
+</div>
+<div class="w-px h-8 bg-black/10 dark:bg-white/10"></div>
+<div>
+<p class="text-lg font-bold text-slate-900 dark:text-white">78<span class="text-xs font-normal text-gray-500">%</span></p>
+<p class="text-xs text-slate-500 dark:text-gray-500 uppercase tracking-wide">Goal</p>
+</div>
+</div>
+</section>
+<!-- Action Buttons -->
+<section class="px-4 mb-6">
+<div class="grid grid-cols-3 gap-3">
+<button class="flex flex-col items-center justify-center gap-2 bg-white dark:bg-surface-dark border border-black/5 dark:border-white/5 rounded-2xl p-3 hover:bg-primary/10 hover:border-primary/50 transition-all group active:scale-95">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-background-dark transition-colors text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<span class="text-xs font-semibold">Check-In</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 bg-white dark:bg-surface-dark border border-black/5 dark:border-white/5 rounded-2xl p-3 hover:bg-primary/10 hover:border-primary/50 transition-all group active:scale-95">
+<div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500 group-hover:text-white transition-colors text-blue-500">
+<span class="material-symbols-outlined">credit_card</span>
+</div>
+<span class="text-xs font-semibold">Renew</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 bg-white dark:bg-surface-dark border border-black/5 dark:border-white/5 rounded-2xl p-3 hover:bg-primary/10 hover:border-primary/50 transition-all group active:scale-95">
+<div class="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center group-hover:bg-orange-500 group-hover:text-white transition-colors text-orange-500">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<span class="text-xs font-semibold">Message</span>
+</button>
+</div>
+</section>
+<!-- Tabs -->
+<div class="sticky top-16 z-40 bg-background-light dark:bg-background-dark border-b border-black/5 dark:border-white/5 mb-6">
+<div class="flex overflow-x-auto no-scrollbar px-4 gap-6">
+<button class="relative py-3 px-1 text-sm font-bold text-slate-900 dark:text-white whitespace-nowrap">
+                    Overview
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary rounded-t-full"></span>
+</button>
+<button class="relative py-3 px-1 text-sm font-medium text-slate-500 dark:text-gray-400 whitespace-nowrap hover:text-slate-900 dark:hover:text-white transition-colors">
+                    Attendance
+                </button>
+<button class="relative py-3 px-1 text-sm font-medium text-slate-500 dark:text-gray-400 whitespace-nowrap hover:text-slate-900 dark:hover:text-white transition-colors">
+                    Payments
+                </button>
+<button class="relative py-3 px-1 text-sm font-medium text-slate-500 dark:text-gray-400 whitespace-nowrap hover:text-slate-900 dark:hover:text-white transition-colors">
+                    Workout Plan
+                </button>
+</div>
+</div>
+<!-- Tab Content: Overview -->
+<div class="px-4 flex flex-col gap-6">
+<!-- Membership Card -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-dark border border-white/5 p-5">
+<!-- Decorative background elements -->
+<div class="absolute -right-10 -top-10 w-40 h-40 bg-primary/20 blur-[60px] rounded-full pointer-events-none"></div>
+<div class="relative z-10 flex justify-between items-start mb-6">
+<div>
+<p class="text-xs font-medium text-primary mb-1 uppercase tracking-wider">Current Plan</p>
+<h3 class="text-xl font-bold text-white">Gold Membership</h3>
+<p class="text-sm text-gray-400 mt-1">Includes all access &amp; spa</p>
+</div>
+<div class="bg-white/10 backdrop-blur-md rounded-lg p-2">
+<span class="material-symbols-outlined text-primary">workspace_premium</span>
+</div>
+</div>
+<div class="relative z-10">
+<div class="w-full bg-black/30 rounded-full h-2 mb-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 75%"></div>
+</div>
+<div class="flex justify-between items-center text-xs">
+<span class="text-gray-400">Expires Dec 31, 2023</span>
+<span class="text-white font-medium">45 Days Left</span>
+</div>
+</div>
+</div>
+<!-- Assigned Trainer -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold">Assigned Trainer</h3>
+<button class="text-xs font-medium text-primary">Change</button>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-xl border border-black/5 dark:border-white/5 hover:border-primary/30 transition-colors cursor-pointer">
+<div class="relative">
+<img alt="Portrait of a fitness trainer smiling in gym gear" class="w-14 h-14 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXYR1lwalgkRmtd1kGmKgP311vjrOJO_XH0-eS1gI-pZADI8uP21tzHU2Jklw-ZIVjOf_OY1f2w-bEs225vR8qAyuTZCSZIMImH4gTOQja0DE9DM8nitJj8W2Ok5M-4iNDNDyDud_tJ3YXWbupiWcR2RcONu8weFxS90MabfH5I6i_2amg6EIf95yQBj3wqEveXyRPUugp2cbXBysOibpehrkfOsAkAuC5t97pMNm1XwTmYkIj7dIMJPzrjrrh7mSCQazbNQBRaqLT"/>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-primary border-2 border-surface-dark rounded-full"></div>
+</div>
+<div class="flex-1">
+<h4 class="font-bold text-slate-900 dark:text-white">Mike Thompson</h4>
+<p class="text-sm text-slate-500 dark:text-gray-400">HIIT Specialist</p>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-black/5 dark:bg-white/5 hover:bg-primary hover:text-background-dark transition-all">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</button>
+</div>
+</div>
+<!-- Recent Activity -->
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h3 class="text-lg font-bold">Recent Activity</h3>
+<button class="text-xs font-medium text-primary">View All</button>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="flex items-start gap-3 p-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<div class="mt-1 min-w-[40px] flex flex-col items-center">
+<span class="text-xs font-bold text-slate-900 dark:text-white">Today</span>
+<span class="text-[10px] text-slate-500 dark:text-gray-500">09:30</span>
+</div>
+<div class="w-px h-full bg-black/10 dark:bg-white/10 absolute left-[39px] -z-10 hidden sm:block"></div>
+<div class="bg-primary/20 text-primary p-2 rounded-full rounded-tl-none">
+<span class="material-symbols-outlined text-[18px]">directions_run</span>
+</div>
+<div class="flex-1">
+<h5 class="text-sm font-semibold text-slate-900 dark:text-white">Checked in at Front Desk</h5>
+<p class="text-xs text-slate-500 dark:text-gray-400 mt-0.5">Duration: 1h 15m</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start gap-3 p-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<div class="mt-1 min-w-[40px] flex flex-col items-center">
+<span class="text-xs font-bold text-slate-500 dark:text-gray-400">Nov 2</span>
+<span class="text-[10px] text-slate-500 dark:text-gray-500">18:45</span>
+</div>
+<div class="bg-blue-500/20 text-blue-500 p-2 rounded-full rounded-tl-none">
+<span class="material-symbols-outlined text-[18px]">fitness_center</span>
+</div>
+<div class="flex-1">
+<h5 class="text-sm font-semibold text-slate-900 dark:text-white">Completed Leg Day Plan</h5>
+<p class="text-xs text-slate-500 dark:text-gray-400 mt-0.5">Trainer: Mike T.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start gap-3 p-3 rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+<div class="mt-1 min-w-[40px] flex flex-col items-center">
+<span class="text-xs font-bold text-slate-500 dark:text-gray-400">Nov 1</span>
+<span class="text-[10px] text-slate-500 dark:text-gray-500">Auto</span>
+</div>
+<div class="bg-orange-500/20 text-orange-500 p-2 rounded-full rounded-tl-none">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+<div class="flex-1">
+<h5 class="text-sm font-semibold text-slate-900 dark:text-white">Monthly Renewal Payment</h5>
+<p class="text-xs text-slate-500 dark:text-gray-400 mt-0.5">Invoice #INV-2023-001</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Health Snapshot -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white dark:bg-surface-dark p-4 rounded-xl border border-black/5 dark:border-white/5">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-red-500 text-[20px]">monitor_heart</span>
+<span class="text-xs font-medium text-gray-500 uppercase">Avg HR</span>
+</div>
+<p class="text-xl font-bold">124 <span class="text-xs font-normal text-gray-500">bpm</span></p>
+</div>
+<div class="bg-white dark:bg-surface-dark p-4 rounded-xl border border-black/5 dark:border-white/5">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-orange-500 text-[20px]">local_fire_department</span>
+<span class="text-xs font-medium text-gray-500 uppercase">Calories</span>
+</div>
+<p class="text-xl font-bold">2,450 <span class="text-xs font-normal text-gray-500">kcal</span></p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button for mobile context -->
+<div class="fixed bottom-6 right-6 z-50">
+<button class="flex items-center justify-center w-14 h-14 bg-primary text-background-dark rounded-full shadow-[0_0_20px_-5px_rgba(13,242,89,0.5)] hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-[28px]">add</span>
+</button>
+</div>
+</body></html>

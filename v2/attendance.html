@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gym Attendance</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df259", // Neon Green
+                        "accent-orange": "#ff6b00", // Neon Orange
+                        "accent-blue": "#00f0ff", // Neon Blue
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                        "surface-dark": "#1A2C22",
+                        "surface-darker": "#15261d",
+                        "text-secondary": "#9cbaa6",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white font-display antialiased overflow-x-hidden">
+<div class="relative min-h-screen flex flex-col pb-8 max-w-md mx-auto shadow-2xl overflow-hidden bg-background-dark">
+<header class="flex flex-col gap-2 p-5 pb-2 pt-12 sticky top-0 z-20 bg-background-dark/95 backdrop-blur-sm border-b border-white/5">
+<div class="flex items-center justify-between h-8">
+<button class="text-white flex items-center justify-center rounded-full hover:bg-white/10 transition-colors size-10 -ml-2">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<div class="flex items-center gap-2 bg-surface-dark px-3 py-1 rounded-full border border-white/5">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<p class="text-white text-sm font-bold tracking-wide">OCT 24</p>
+</div>
+</div>
+<div class="flex items-end justify-between mt-2">
+<h1 class="text-white tracking-tight text-[28px] font-bold leading-none">Daily<br/><span class="text-text-secondary">Attendance</span></h1>
+<div class="flex items-center gap-1.5">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+</span>
+<span class="text-primary text-sm font-medium">Live</span>
+</div>
+</div>
+</header>
+<div class="px-5 py-4 flex gap-3 sticky top-[125px] z-10 bg-background-dark">
+<div class="flex-1 relative h-14">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-secondary text-[24px]">search</span>
+</div>
+<input class="block w-full h-full pl-12 pr-4 rounded-xl bg-surface-dark border-none text-white placeholder-text-secondary focus:ring-2 focus:ring-primary focus:bg-surface-darker transition-all shadow-inner text-base" placeholder="Find member..." type="text"/>
+</div>
+<button class="h-14 w-14 shrink-0 rounded-xl bg-primary flex items-center justify-center text-background-dark shadow-[0_0_15px_rgba(13,242,89,0.4)] hover:shadow-[0_0_25px_rgba(13,242,89,0.6)] active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[28px] font-bold">qr_code_scanner</span>
+</button>
+</div>
+<div class="px-5 pb-2">
+<div class="flex gap-3">
+<div class="flex flex-1 flex-col justify-between rounded-2xl p-4 bg-surface-dark border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-4xl">check_circle</span>
+</div>
+<p class="text-text-secondary text-sm font-medium uppercase tracking-wider">Checked In</p>
+<div class="flex items-end gap-2 mt-2">
+<p class="text-white text-3xl font-bold leading-none">42</p>
+<p class="text-primary text-xs font-bold mb-1">+12%</p>
+</div>
+<div class="w-full bg-white/10 h-1 mt-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 70%"></div>
+</div>
+</div>
+<div class="flex flex-1 flex-col justify-between rounded-2xl p-4 bg-surface-dark border border-white/5 relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-4xl">pending</span>
+</div>
+<p class="text-text-secondary text-sm font-medium uppercase tracking-wider">Pending</p>
+<div class="flex items-end gap-2 mt-2">
+<p class="text-white text-3xl font-bold leading-none">8</p>
+</div>
+<div class="w-full bg-white/10 h-1 mt-3 rounded-full overflow-hidden">
+<div class="bg-text-secondary h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex gap-2 px-5 py-4 overflow-x-auto no-scrollbar">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/10 px-6 active:scale-95 transition-transform">
+<p class="text-white text-sm font-medium">All</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-6 shadow-[0_0_10px_rgba(13,242,89,0.3)] active:scale-95 transition-transform">
+<p class="text-background-dark text-sm font-bold">Expected</p>
+<span class="bg-background-dark/20 text-background-dark text-[10px] font-bold px-1.5 py-0.5 rounded-md">8</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/10 px-6 active:scale-95 transition-transform">
+<p class="text-white text-sm font-medium">Checked In</p>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-surface-dark border border-white/10 px-6 active:scale-95 transition-transform">
+<p class="text-white text-sm font-medium">Absent</p>
+</button>
+</div>
+<div class="flex flex-col gap-6 px-5 mt-2">
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<h3 class="text-white text-lg font-bold tracking-tight">Up Next</h3>
+<button class="text-xs text-primary font-medium uppercase tracking-wider">View All</button>
+</div>
+<div class="flex items-center gap-4 bg-surface-dark p-3 pr-4 rounded-2xl border border-white/5 shadow-sm hover:bg-surface-darker transition-colors">
+<div class="relative shrink-0">
+<img alt="Profile picture of Sarah Connor" class="h-14 w-14 rounded-full object-cover ring-2 ring-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDk7ZPvFx2Poo-LXghhz1DkuriYBjABpIQPqV6Wzw4Xi_1DSLbHCgKjrVHNlMhkLauSqtqArr0QC4Q9FEe78Co9rGqMwWDGkOGwS5PFCkSyLbuFppv-XD5PtLEMQl-4BzYvx57SCpL5af6fSVLfszu3s5SKR13Bxs7hdNflatnw2fVOxMB3CH8gBaWMGUTEfd4yfQYuzTts5DjDGlSTASZZjduI3sWxuC6RbLhkw0AHtBfO9juObRWK0_GQscRH9M1ErEBOlakppZ8j"/>
+<div class="absolute bottom-0 right-0 h-3.5 w-3.5 bg-gray-500 border-2 border-surface-dark rounded-full"></div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<p class="text-white text-base font-bold truncate">Sarah Connor</p>
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-blue"></span> Premium
+                        </p>
+</div>
+<button class="h-10 px-5 bg-primary rounded-lg text-background-dark font-bold text-sm shadow-[0_4px_10px_rgba(13,242,89,0.3)] hover:shadow-[0_4px_15px_rgba(13,242,89,0.5)] active:scale-95 transition-all flex items-center gap-1">
+                        Check In
+                    </button>
+</div>
+<div class="flex items-center gap-4 bg-surface-dark p-3 pr-4 rounded-2xl border border-accent-orange/30 shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-accent-orange"></div>
+<div class="relative shrink-0">
+<img alt="Profile picture of Mike Tyson" class="h-14 w-14 rounded-full object-cover ring-2 ring-accent-orange/50 opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtmASSXIK9qlvpmJgUWtmGX8Bo92fCG33Jz91Nb0Yt90xPuvqscO3zmyl-H-ynuCa-5zXaqYkSkhoVFXS1AcH54Y_JIeVPT4Av9e6k-9iPolHperZ_uXyJPWeq5F_8usRekYb-gjeWDa4SVwQv4WBqxCr-nF2D4ZXKrNkx99kHlO2UpnTToKuVguk1lP1AqicnU8pjHUz8VCC55sSBVQdKpzasg9SHwVgHM_dQMjRHXLbxBVLx8kdzcBpdQwaS4SD6D_bq1kld41e9"/>
+<div class="absolute bottom-0 right-0 flex items-center justify-center h-4 w-4 bg-accent-orange border-2 border-surface-dark rounded-full">
+<span class="material-symbols-outlined text-[10px] text-white font-bold">priority_high</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<p class="text-white/90 text-base font-bold truncate">Mike Tyson</p>
+<p class="text-accent-orange text-xs font-bold uppercase tracking-wider">Membership Expired</p>
+</div>
+<button class="h-10 px-4 bg-transparent border border-accent-orange text-accent-orange rounded-lg font-bold text-sm hover:bg-accent-orange/10 active:scale-95 transition-all flex items-center gap-1">
+                        Resolve
+                    </button>
+</div>
+<div class="flex items-center gap-4 bg-surface-dark p-3 pr-4 rounded-2xl border border-white/5 shadow-sm hover:bg-surface-darker transition-colors">
+<div class="relative shrink-0">
+<img alt="Profile picture of Jane Doe" class="h-14 w-14 rounded-full object-cover ring-2 ring-white/10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOKM4kzieIT5zCFwXULz4ALoIzksGP3yrSFBuc_HZEHMfyIyk4R0aT_7tXMC3ry0mcUnVbEAzpL_iOvm5SnEDoI9R6exjM_OtgdMVIkOCVzfteTDEYr_ImSsJl_lDgHe9PxyKPKYH-UGQDbmUoEsKU_8hBmMMvnCZp1S5jykwdLn2KJBt2JQogfHL55gARDoSwbwvLSAvanlvNB7Z2u5QZuDE1I24uo2If6KF-d-i8nkOcelcLvzkCd6rjnZQ_vG02KdW4FvFZXrch"/>
+<div class="absolute bottom-0 right-0 h-3.5 w-3.5 bg-gray-500 border-2 border-surface-dark rounded-full"></div>
+</div>
+<div class="flex flex-col flex-1 min-w-0">
+<p class="text-white text-base font-bold truncate">Jane Doe</p>
+<p class="text-text-secondary text-xs font-medium uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-gray-400"></span> Basic
+                        </p>
+</div>
+<button class="h-10 px-5 bg-primary rounded-lg text-background-dark font-bold text-sm shadow-[0_4px_10px_rgba(13,242,89,0.3)] hover:shadow-[0_4px_15px_rgba(13,242,89,0.5)] active:scale-95 transition-all flex items-center gap-1">
+                        Check In
+                    </button>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-8">
+<div class="flex items-center justify-between">
+<h3 class="text-white text-lg font-bold tracking-tight">Recent Check-ins</h3>
+</div>
+<div class="flex items-center gap-4 bg-surface-dark/50 p-3 pr-4 rounded-2xl border border-white/5">
+<div class="relative shrink-0">
+<img alt="Profile picture of John Smith" class="h-12 w-12 rounded-full object-cover grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChZKGdx8eU1RAlEW_Sckq5P6mVJkmpbSlUylV-s388_xjryX0mm-iiczMORkqELPNQtW_C7gpIuF0btU5skTqjbF5sjLBC_wEbHMCczd3fAbTRPT4ZacGvF8PjTbS-NtOxc4dQqvq657GuKnIVfi1YBgeoAQen79j-QYdAWLWl6CeMVJiMhzkn5mlhLwAsA7CkpnZ1gQ1GMqb5FcMFIsXXBIyAlV4wgZvhC2LTyJBli4A0pLEsh1Zjs7Q2Ht8_DU8GK42td0Ex-XdQ"/>
+<div class="absolute bottom-0 right-0 flex items-center justify-center h-4 w-4 bg-primary border-2 border-surface-dark rounded-full">
+<span class="material-symbols-outlined text-[10px] text-background-dark font-bold">check</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0 opacity-60">
+<p class="text-white text-base font-medium truncate">John Smith</p>
+<p class="text-text-secondary text-xs font-medium">Checked in at 10:42 AM</p>
+</div>
+<div class="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-text-secondary text-[18px]">more_vert</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-dark/50 p-3 pr-4 rounded-2xl border border-white/5">
+<div class="relative shrink-0">
+<img alt="Profile picture of Alex Ray" class="h-12 w-12 rounded-full object-cover grayscale opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzbMPqLmP5D2Ir0m4715KX-N8fq4EldlMT8P-v4Hhd7tNfFtt-oiuhhjQkQUFgNEjRsCekXZNqOQhlpMLJ022TS3PK4luFJCGtpYcetjJDPtJbia1CkWPuobQnhRmzCB_Wu2vLV7a2XtjEcOQZ7yPLTIhCQcYR7RtohXkVOBDvYnN1PziTEZjmFqAOtBuO10p-75Fpnvf4R3wVm_XwDmw15Pn8ZEvbb_-LieAgYzELrVfixZHstGRghAdkTjzdODAb7O_eS0JYgiO0"/>
+<div class="absolute bottom-0 right-0 flex items-center justify-center h-4 w-4 bg-primary border-2 border-surface-dark rounded-full">
+<span class="material-symbols-outlined text-[10px] text-background-dark font-bold">check</span>
+</div>
+</div>
+<div class="flex flex-col flex-1 min-w-0 opacity-60">
+<p class="text-white text-base font-medium truncate">Alex Ray</p>
+<p class="text-text-secondary text-xs font-medium">Checked in at 10:38 AM</p>
+</div>
+<div class="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-text-secondary text-[18px]">more_vert</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</body></html>

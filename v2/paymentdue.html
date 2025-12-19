@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payments &amp; Dues - Gym Management</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0df259",
+              "background-light": "#f5f8f6",
+              "background-dark": "#102216",
+              "card-dark": "#1c2e24", 
+              "surface-dark": "#28392e",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }.no-scrollbar {
+            -ms-overflow-style: none;scrollbar-width: none;}
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased selection:bg-primary selection:text-background-dark overflow-x-hidden pb-8">
+<div class="sticky top-0 z-50 bg-background-light dark:bg-background-dark/95 backdrop-blur-md transition-colors duration-200 border-b border-gray-200 dark:border-white/5">
+<div class="flex items-center p-4 justify-between">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Payments &amp; Dues</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="text-slate-900 dark:text-white flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[24px]">filter_list</span>
+</button>
+</div>
+</div>
+<div class="px-4 pb-4">
+<div class="flex w-full items-stretch rounded-xl h-12 bg-white dark:bg-surface-dark shadow-sm">
+<div class="text-slate-400 dark:text-[#9cbaa6] flex items-center justify-center pl-4 pr-2">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input class="flex w-full min-w-0 flex-1 bg-transparent border-none text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-[#9cbaa6] focus:outline-none focus:ring-0 text-base font-normal h-full" placeholder="Search member by name..."/>
+</div>
+</div>
+</div>
+<div class="pt-6 pb-2">
+<div class="flex gap-4 px-4 overflow-x-auto no-scrollbar snap-x">
+<div class="flex min-w-[160px] flex-1 flex-col gap-1 rounded-2xl p-5 bg-white dark:bg-surface-dark shadow-sm snap-start border border-gray-100 dark:border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<div class="bg-primary/20 p-1.5 rounded-full text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+<p class="text-slate-500 dark:text-gray-400 text-sm font-medium">Collected</p>
+</div>
+<p class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight">$1,250</p>
+<p class="text-primary text-xs font-medium">+12% vs yesterday</p>
+</div>
+<div class="flex min-w-[160px] flex-1 flex-col gap-1 rounded-2xl p-5 bg-white dark:bg-surface-dark shadow-sm snap-start border border-gray-100 dark:border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<div class="bg-orange-500/20 p-1.5 rounded-full text-orange-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">pending</span>
+</div>
+<p class="text-slate-500 dark:text-gray-400 text-sm font-medium">Pending</p>
+</div>
+<p class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight">$450</p>
+<p class="text-orange-500 text-xs font-medium">5 members</p>
+</div>
+<div class="flex min-w-[160px] flex-1 flex-col gap-1 rounded-2xl p-5 bg-white dark:bg-surface-dark shadow-sm snap-start border border-gray-100 dark:border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<div class="bg-red-500/20 p-1.5 rounded-full text-red-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<p class="text-slate-500 dark:text-gray-400 text-sm font-medium">Overdue</p>
+</div>
+<p class="text-slate-900 dark:text-white tracking-tight text-2xl font-bold leading-tight">$850</p>
+<p class="text-red-500 text-xs font-medium">-2% vs last week</p>
+</div>
+</div>
+</div>
+<div class="flex gap-3 px-4 py-4 overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center px-5 rounded-full bg-slate-900 dark:bg-white text-white dark:text-background-dark font-medium text-sm transition-transform active:scale-95">
+            All
+        </button>
+<button class="flex h-9 shrink-0 items-center justify-center px-5 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-transparent text-slate-600 dark:text-gray-300 font-medium text-sm transition-transform active:scale-95">
+            Overdue <span class="ml-2 flex h-5 w-5 items-center justify-center rounded-full bg-red-500/20 text-[10px] text-red-500 font-bold">3</span>
+</button>
+<button class="flex h-9 shrink-0 items-center justify-center px-5 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-transparent text-slate-600 dark:text-gray-300 font-medium text-sm transition-transform active:scale-95">
+            Partial
+        </button>
+<button class="flex h-9 shrink-0 items-center justify-center px-5 rounded-full bg-white dark:bg-surface-dark border border-gray-200 dark:border-transparent text-slate-600 dark:text-gray-300 font-medium text-sm transition-transform active:scale-95">
+            Paid
+        </button>
+</div>
+<div class="flex flex-col gap-4 px-4 pt-2">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Pending Dues</h3>
+<div class="group relative flex flex-col gap-3 rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-sm border-l-4 border-red-500 active:scale-[0.99] transition-transform duration-100">
+<div class="flex items-start justify-between">
+<div class="flex gap-3">
+<div class="relative">
+<img alt="Member" class="size-12 rounded-full object-cover bg-gray-200 dark:bg-gray-700" data-alt="Portrait of gym member Alex" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNGd_O-HcEd-FHMi-_5A8qRPV1ITtX7sj3PENWAX2CBeeV-KKVQ_Z7w3tqhZXfJ-GNwCRZjO9tze7CfMWBc5Yuw8zgMgVU99LlWbSZ5zU4HYeWosoCecpn65ZDj24bmuyHouYg8a4mxq-Gwtbz4xKPl1pIU-X-HZiprVwQd_h-dY_hbAme3B8NcPWXHgZwYQP4SNGluCZavrg5AKIJJ1gQYE3syFC5thykfnsPCtrhUM8My5T16eQWAf7Xf_HPnksc6I6I16ibbQFR"/>
+<div class="absolute -bottom-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 border-2 border-white dark:border-surface-dark">
+<span class="material-symbols-outlined text-[12px] text-white">priority_high</span>
+</div>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white font-bold text-base leading-tight">Alex Johnson</p>
+<p class="text-slate-500 dark:text-gray-400 text-sm">CrossFit Unlimited</p>
+<p class="text-red-500 text-xs font-medium mt-1">Due 3 days ago</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-slate-900 dark:text-white text-lg font-bold">$120.00</p>
+<span class="inline-flex items-center rounded-md bg-red-500/10 px-2 py-1 text-xs font-medium text-red-500 ring-1 ring-inset ring-red-500/20">Overdue</span>
+</div>
+</div>
+<div class="h-px w-full bg-gray-100 dark:bg-white/5"></div>
+<div class="flex gap-3">
+<button class="flex-1 rounded-lg bg-gray-100 dark:bg-white/5 py-2.5 text-sm font-bold text-slate-700 dark:text-white transition-colors hover:bg-gray-200 dark:hover:bg-white/10">Remind</button>
+<button class="flex-1 rounded-lg bg-primary py-2.5 text-sm font-bold text-background-dark shadow-lg shadow-primary/20 transition-transform active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">attach_money</span>
+                    Collect
+                </button>
+</div>
+</div>
+<div class="group relative flex flex-col gap-3 rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-sm border-l-4 border-orange-500 active:scale-[0.99] transition-transform duration-100">
+<div class="flex items-start justify-between">
+<div class="flex gap-3">
+<div class="relative">
+<img alt="Member" class="size-12 rounded-full object-cover bg-gray-200 dark:bg-gray-700" data-alt="Portrait of gym member Sarah" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1youZq2fOTxeRZacTV9I2Ao_Cr1IU5IC8g7NddOk3qAny1hsyN_9W9hUq0siqxR9Y7L5peWccb34WIt5kG65SX-2LMbMx0FBSx3fXlUQX1OHanlLrVKe_NpyTACqv6IGMk-uewXygTH7B3GGcWo198Th6fh5bkQp_IWIerOA-MP-P7StEkA5cE_Z1sw6qYUgBWBesgdHfiA2ijt8X9XFB1456toVFLEuSTnsvIM6vAzAjpfMs0ZYIPAPIkUhT4G-RzHEieo6SwVmV"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white font-bold text-base leading-tight">Sarah Smith</p>
+<p class="text-slate-500 dark:text-gray-400 text-sm">Yoga Monthly</p>
+<p class="text-orange-500 text-xs font-medium mt-1">Due Today</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-slate-900 dark:text-white text-lg font-bold">$45.00</p>
+<p class="text-xs text-slate-400 line-through">$90.00</p>
+<span class="inline-flex mt-1 items-center rounded-md bg-orange-500/10 px-2 py-1 text-xs font-medium text-orange-500 ring-1 ring-inset ring-orange-500/20">Partial</span>
+</div>
+</div>
+<div class="h-px w-full bg-gray-100 dark:bg-white/5"></div>
+<div class="flex gap-3">
+<button class="flex-1 rounded-lg bg-primary py-2.5 text-sm font-bold text-background-dark shadow-lg shadow-primary/20 transition-transform active:scale-95 flex items-center justify-center gap-2">
+                    Collect Remainder
+                </button>
+</div>
+</div>
+<div class="group relative flex flex-col gap-3 rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-sm border-l-4 border-gray-300 dark:border-gray-600 active:scale-[0.99] transition-transform duration-100">
+<div class="flex items-start justify-between">
+<div class="flex gap-3">
+<div class="relative">
+<img alt="Member" class="size-12 rounded-full object-cover bg-gray-200 dark:bg-gray-700" data-alt="Portrait of gym member Marcus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4oHx2B1m3-cixDh9sz-DhT0qQDCB0q6ig1hfVR8hz-3PKveqa9g7jDk7WYb5IjUr1SQC0uJYEund6EiuyYLY9Fl2SMPWO_d8tkQEHzIAGWRfbc0-42BAisMjZA7bzzlW1BhsBO1SJwUN828OlPQjctrNxr7FzDRMpbOoI-TDYl6ZyYmPGwr5ADnJjNrHJlYNLFRU99BWr4lEo5VKK1GV6vQX2kgdZfWg5Mux5neG2f4_eC0L-7tT-2lD8hyMd8NpOAkynggShrq7b"/>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white font-bold text-base leading-tight">Marcus Ray</p>
+<p class="text-slate-500 dark:text-gray-400 text-sm">Personal Training (5 pk)</p>
+<p class="text-slate-400 dark:text-gray-500 text-xs font-medium mt-1">Due Tomorrow</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-slate-900 dark:text-white text-lg font-bold">$250.00</p>
+<span class="inline-flex items-center rounded-md bg-gray-100 dark:bg-white/10 px-2 py-1 text-xs font-medium text-slate-600 dark:text-gray-300 ring-1 ring-inset ring-gray-500/20">Upcoming</span>
+</div>
+</div>
+</div>
+<div class="h-6"></div> 
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Recent Transactions</h3>
+<div class="group relative flex items-center justify-between gap-3 rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-sm opacity-80">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Member" class="size-10 rounded-full object-cover bg-gray-200 dark:bg-gray-700 grayscale" data-alt="Portrait of gym member Lisa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQZ-sQRA7eTFMMPOFhMlWIY9BPI-RaXnGm1Hkj7Gwnij_Wy1hChUW8JDLXYD4OJjMCTKOzFKIERCLcTBZS1Iii7dSrziE6J1fZ_rKHM3TnoldGZPNq9g2OaEdmfBRnTD4NUyduGSCkXtoCuCgGcow-ba7GNcofHt17MtB02tku2pbWDfwEYKnX7HV9HRINhREa4tzWYYDfb2G-sUXZ9oNzOrHTT-wJ-eJ6pllaGET-4AeIhfGgiH1-f6yff1EWWchPh9LFpv8OhLB7"/>
+<div class="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary border-2 border-white dark:border-surface-dark">
+<span class="material-symbols-outlined text-[10px] text-black font-bold">check</span>
+</div>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white font-medium text-base leading-tight">Lisa Wang</p>
+<p class="text-slate-500 dark:text-gray-400 text-xs">Standard Plan • 2h ago</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-slate-900 dark:text-white text-base font-bold">$60.00</p>
+<span class="text-primary text-xs font-bold">Paid</span>
+</div>
+</div>
+<div class="group relative flex items-center justify-between gap-3 rounded-2xl bg-white dark:bg-surface-dark p-4 shadow-sm opacity-80">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Member" class="size-10 rounded-full object-cover bg-gray-200 dark:bg-gray-700 grayscale" data-alt="Portrait of gym member David" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2n5UDlXdg3FQUe3Hkpvnlg6wuCE79wYd1z__03gBRfHDT9hIllZqEVF-s2zqj-9sNB76xwd3D9GJ95PyIt41dBGWSauP2tQWXFIRDPowqcspKRdP4iU6gl-EbPbFI3lc3bLpSp7quN1Sh9bl_01HtigS5fwfyWKK27IFVfWNYpuAd5sp5F0qutSdKkYxdGY4cWLtproi9u2xTFzvDMHCykVR9nKC6vnVEoLT1SXUqIM9Vk8N-8Ta2I4Bf_FweAY_0Ya0LJ9TIwzqR"/>
+<div class="absolute -bottom-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-primary border-2 border-white dark:border-surface-dark">
+<span class="material-symbols-outlined text-[10px] text-black font-bold">check</span>
+</div>
+</div>
+<div class="flex flex-col">
+<p class="text-slate-900 dark:text-white font-medium text-base leading-tight">David Chen</p>
+<p class="text-slate-500 dark:text-gray-400 text-xs">Drop-in • 4h ago</p>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<p class="text-slate-900 dark:text-white text-base font-bold">$25.00</p>
+<span class="text-primary text-xs font-bold">Paid</span>
+</div>
+</div>
+</div>
+<button class="fixed bottom-6 right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-primary shadow-lg shadow-primary/40 transition-transform active:scale-90 hover:scale-105">
+<span class="material-symbols-outlined text-[28px] text-background-dark">qr_code_scanner</span>
+</button>
+
+</body></html>

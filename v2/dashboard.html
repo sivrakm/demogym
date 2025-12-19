@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gym Staff Dashboard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df259",
+                        "primary-dark": "#0abf45",
+                        "secondary-orange": "#fa5538",
+                        "secondary-blue": "#38bdfa",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                        "surface-dark": "#1a2c22",
+                        "surface-dark-highlight": "#23392d",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased selection:bg-primary selection:text-black pb-8">
+<div class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-white/5">
+<div class="flex items-center p-4 justify-between">
+<div class="flex items-center gap-3">
+<div class="relative group cursor-pointer">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/50" data-alt="Profile picture of a gym trainer smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCLFoWQTWPlnzOfmlQqF3BFju2n68EcCSrnDmrkCgtRf5c39M1517MzBnKt5JXoQloJj3uTxZmvL-6hg2j0CTXAxYMAWUhPPIFxghdW6Kow_qSdZQS-TKCYmwA1Ez13ZxEHbjWMhAfqeD4TLH4aaUPn8X1WMsieIZDgnW3vXnDrHMKicG121eeyHG9DfMzik39XIgDACQYkIk6oJn5be2bt-VQcaAbVDrfoP1S6uYBvksTidmefmSknGq2w4e5iKZQdk7l5X3Xy0wcm");'>
+</div>
+<div class="absolute bottom-0 right-0 size-3 bg-primary rounded-full border-2 border-background-dark"></div>
+</div>
+<div>
+<h2 class="text-xs font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">Dashboard</h2>
+<h1 class="text-sm font-bold leading-tight">Gym Manager Pro</h1>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="relative flex items-center justify-center rounded-full size-10 bg-transparent hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-gray-700 dark:text-white" style="font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;">notifications</span>
+<span class="absolute top-2 right-2 size-2 bg-secondary-orange rounded-full"></span>
+</button>
+</div>
+</div>
+</div>
+<div class="px-4 pt-6 pb-2">
+<h3 class="text-gray-500 dark:text-gray-400 text-sm font-medium mb-1">June 14, 2024</h3>
+<h2 class="text-3xl font-bold leading-tight">Good Morning, <span class="text-primary">Alex</span></h2>
+</div>
+<div class="flex overflow-x-auto gap-4 px-4 py-4 no-scrollbar snap-x snap-mandatory">
+<div class="snap-start min-w-[160px] flex-1 flex flex-col justify-between rounded-xl p-5 bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 shadow-sm">
+<div class="flex items-start justify-between">
+<div class="bg-primary/10 p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-1 rounded-full">+5%</span>
+</div>
+<div class="mt-4">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wide">Total Members</p>
+<p class="text-2xl font-bold mt-1">1,240</p>
+</div>
+</div>
+<div class="snap-start min-w-[160px] flex-1 flex flex-col justify-between rounded-xl p-5 bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 shadow-sm">
+<div class="flex items-start justify-between">
+<div class="bg-secondary-blue/10 p-2 rounded-lg text-secondary-blue">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+<span class="text-primary text-xs font-bold bg-primary/10 px-2 py-1 rounded-full">+2%</span>
+</div>
+<div class="mt-4">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wide">Active Now</p>
+<p class="text-2xl font-bold mt-1">985</p>
+</div>
+</div>
+<div class="snap-start min-w-[160px] flex-1 flex flex-col justify-between rounded-xl p-5 bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 shadow-sm">
+<div class="flex items-start justify-between">
+<div class="bg-secondary-orange/10 p-2 rounded-lg text-secondary-orange">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<span class="text-secondary-orange text-xs font-bold bg-secondary-orange/10 px-2 py-1 rounded-full">Alert</span>
+</div>
+<div class="mt-4">
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-wide">Pending</p>
+<p class="text-2xl font-bold mt-1">$450</p>
+</div>
+</div>
+</div>
+<div class="px-4 py-4">
+<h3 class="text-base font-bold mb-4 uppercase tracking-wide text-gray-800 dark:text-white">Quick Actions</h3>
+<div class="grid grid-cols-3 gap-3">
+<button class="flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-primary text-black shadow-lg shadow-primary/20 active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-3xl font-bold">person_add</span>
+<span class="text-xs font-bold leading-none">Add Member</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white dark:bg-surface-dark-highlight border border-gray-200 dark:border-white/5 shadow-sm active:bg-gray-50 dark:active:bg-surface-dark active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl text-primary">qr_code_scanner</span>
+<span class="text-xs font-medium leading-none text-gray-700 dark:text-gray-200">Attendance</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-3 p-4 rounded-xl bg-white dark:bg-surface-dark-highlight border border-gray-200 dark:border-white/5 shadow-sm active:bg-gray-50 dark:active:bg-surface-dark active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl text-secondary-blue">point_of_sale</span>
+<span class="text-xs font-medium leading-none text-gray-700 dark:text-gray-200">Collect Pay</span>
+</button>
+</div>
+</div>
+<div class="px-4 py-2">
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-base font-bold uppercase tracking-wide text-gray-800 dark:text-white">Today's Pulse</h3>
+<a class="text-xs text-primary font-bold hover:underline" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="relative overflow-hidden rounded-xl bg-white dark:bg-surface-dark p-4 border border-gray-200 dark:border-white/5">
+<div class="absolute right-0 top-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl text-white">how_to_reg</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-1">Check-ins</p>
+<div class="flex items-end gap-2">
+<span class="text-3xl font-bold text-white">84</span>
+<span class="text-xs text-primary mb-1 font-medium">↑ High</span>
+</div>
+<div class="w-full bg-gray-700 h-1 mt-3 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div class="relative overflow-hidden rounded-xl bg-white dark:bg-surface-dark p-4 border border-gray-200 dark:border-white/5">
+<div class="absolute right-0 top-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-6xl text-secondary-blue">person_add_alt</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium mb-1">New Joins</p>
+<div class="flex items-end gap-2">
+<span class="text-3xl font-bold text-white">3</span>
+<span class="text-xs text-secondary-blue mb-1 font-medium">+1 Today</span>
+</div>
+<div class="w-full bg-gray-700 h-1 mt-3 rounded-full overflow-hidden">
+<div class="bg-secondary-blue h-full rounded-full" style="width: 30%"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 py-6">
+<h3 class="text-base font-bold mb-4 uppercase tracking-wide text-gray-800 dark:text-white">Needs Attention</h3>
+<div class="flex flex-col gap-3">
+<div class="flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-xl border-l-4 border-secondary-orange shadow-sm">
+<div class="bg-secondary-orange/10 p-2 rounded-full shrink-0">
+<span class="material-symbols-outlined text-secondary-orange">hourglass_bottom</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-gray-900 dark:text-white truncate">3 Memberships Expiring</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">Expiring within 24 hours</p>
+</div>
+<button class="p-2 hover:bg-white/5 rounded-full">
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</button>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-surface-dark p-4 rounded-xl border-l-4 border-yellow-500 shadow-sm">
+<div class="bg-yellow-500/10 p-2 rounded-full shrink-0">
+<span class="material-symbols-outlined text-yellow-500">warning</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-gray-900 dark:text-white truncate">5 Overdue Payments</p>
+<p class="text-xs text-gray-500 dark:text-gray-400">&gt; 7 days overdue</p>
+</div>
+<button class="p-2 hover:bg-white/5 rounded-full">
+<span class="material-symbols-outlined text-gray-400">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>

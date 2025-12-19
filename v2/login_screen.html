@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GymOS Staff Portal</title>
+<!-- Google Fonts: Lexend -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df259", // Neon Green
+                        "primary-hover": "#0be052",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216", // Deep charcoal/green
+                        "surface-dark": "#1A2C23", // Slightly lighter for cards
+                        "input-bg": "#1b271f",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "glow": "0 0 15px rgba(13, 242, 89, 0.3)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        /* Custom scrollbar hiding for clean UI */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#111813] dark:text-white antialiased selection:bg-primary selection:text-background-dark">
+<!-- Main Container -->
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden max-w-md mx-auto shadow-2xl bg-background-light dark:bg-background-dark">
+<!-- Header Image / Hero Section -->
+<div class="@container">
+<div class="@[480px]:px-4 @[480px]:pt-4">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden relative h-[240px] @[480px]:rounded-xl" data-alt="Modern dark gym interior with neon lights" style='background-image: linear-gradient(to bottom, rgba(16,34,22,0) 0%, rgba(16,34,22,1) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBF3YOyAgtLvQWgO4GSqereET_qCTFjOH82dlia4SdtZwk3N-jJor8PCVuhyFtNW4imZETe4-INp0U5-voDv_smExdsqAq5qgHVP9OHauLfRTavchPyC5faeYoj96VtXnlEPuJDzz89H-w7VAD-xgC-tb1bPiQd0uMP_4jGEWH0W-ljqeS69I92dYVXvNlo0eFiv0nokETirB9M55wjU-V_rErWeK1_38cWNozbHSLLaIQrr3KfWJHH37bIdVioaCLwknUIURiJmEJU");'>
+<!-- Logo Overlay -->
+<div class="absolute top-6 left-0 right-0 flex justify-center">
+<div class="flex items-center gap-2 bg-background-dark/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
+<span class="material-symbols-outlined text-primary">fitness_center</span>
+<span class="text-white font-bold tracking-tight">GymOS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Area: Login State -->
+<div class="flex-1 px-6 pb-8 relative z-10 -mt-8">
+<!-- Headline -->
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight text-center mb-2">Welcome Back</h1>
+<p class="text-[#9cbaa6] text-base font-normal leading-normal text-center mb-8">Manage your gym effortlessly.</p>
+<!-- Login Form Container -->
+<div class="space-y-6">
+<!-- Segmented Control -->
+<div class="flex p-1 bg-[#1b271f] rounded-xl border border-[#3b5443]">
+<label class="flex-1 relative cursor-pointer group">
+<input checked="" class="peer sr-only" name="login_method" type="radio" value="phone"/>
+<div class="h-10 flex items-center justify-center rounded-lg text-sm font-medium text-[#9cbaa6] peer-checked:bg-background-dark peer-checked:text-primary peer-checked:shadow-sm transition-all duration-200">
+<span class="material-symbols-outlined text-[18px] mr-2">smartphone</span>
+                            Phone
+                        </div>
+</label>
+<label class="flex-1 relative cursor-pointer group">
+<input class="peer sr-only" name="login_method" type="radio" value="email"/>
+<div class="h-10 flex items-center justify-center rounded-lg text-sm font-medium text-[#9cbaa6] peer-checked:bg-background-dark peer-checked:text-primary peer-checked:shadow-sm transition-all duration-200">
+<span class="material-symbols-outlined text-[18px] mr-2">mail</span>
+                            Email
+                        </div>
+</label>
+</div>
+<!-- Input Field -->
+<div class="space-y-2">
+<label class="block text-sm font-medium text-[#9cbaa6] ml-1">Mobile Number</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="text-white/40 font-medium">+1</span>
+</div>
+<input class="block w-full rounded-xl border-0 py-4 pl-12 pr-4 text-white bg-[#1b271f] ring-1 ring-inset ring-[#3b5443] placeholder:text-white/20 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-lg sm:leading-6 transition-shadow" placeholder="(555) 000-0000" type="tel"/>
+</div>
+</div>
+<!-- Primary Action Button -->
+<button class="w-full group relative flex justify-center items-center py-4 px-4 border border-transparent text-base font-bold rounded-xl text-background-dark bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-200 shadow-glow">
+                    Get Login Code
+                    <span class="material-symbols-outlined ml-2 text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<!-- Biometric Login Hint -->
+<div class="flex flex-col items-center justify-center pt-4 gap-3 opacity-60 hover:opacity-100 transition-opacity cursor-pointer">
+<span class="material-symbols-outlined text-primary text-4xl">fingerprint</span>
+<span class="text-xs text-[#9cbaa6] font-medium tracking-wide">TAP TO USE TOUCH ID</span>
+</div>
+</div>
+</div>
+<!-- DIVIDER FOR DEMO PURPOSES ONLY -->
+<div class="w-full h-px bg-gradient-to-r from-transparent via-[#3b5443] to-transparent my-8 opacity-50"></div>
+<div class="text-center text-[#9cbaa6] text-xs uppercase tracking-widest mb-4">Screen 2: Role Selection</div>
+<!-- END DIVIDER -->
+<!-- Content Area: Role Selection State -->
+<div class="flex-1 px-6 pb-12">
+<h2 class="text-white text-2xl font-bold mb-6">Select Profile</h2>
+<div class="grid grid-cols-1 gap-4">
+<!-- Role Card: Owner (Selected State) -->
+<label class="relative cursor-pointer group">
+<input checked="" class="peer sr-only" name="role" type="radio" value="owner"/>
+<div class="flex items-center p-4 rounded-xl border-2 border-[#3b5443] bg-surface-dark transition-all duration-200 peer-checked:border-primary peer-checked:bg-[#152019] peer-checked:shadow-[0_0_15px_rgba(13,242,89,0.1)]">
+<div class="flex-shrink-0 h-14 w-14 rounded-lg bg-[#28392e] peer-checked:bg-primary peer-checked:text-background-dark text-primary flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-3xl">admin_panel_settings</span>
+</div>
+<div class="ml-4 flex-1">
+<h3 class="text-lg font-bold text-white group-hover:text-primary transition-colors">Owner</h3>
+<p class="text-sm text-[#9cbaa6]">Admin &amp; Analytics</p>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-[#3b5443] peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
+<div class="h-2.5 w-2.5 rounded-full bg-background-dark hidden peer-checked:block"></div>
+</div>
+</div>
+</label>
+<!-- Role Card: Trainer -->
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="role" type="radio" value="trainer"/>
+<div class="flex items-center p-4 rounded-xl border border-[#3b5443]/50 bg-surface-dark/50 transition-all duration-200 hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-[#152019]">
+<div class="flex-shrink-0 h-14 w-14 rounded-lg bg-[#28392e] text-[#9cbaa6] group-hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-3xl">fitness_center</span>
+</div>
+<div class="ml-4 flex-1">
+<h3 class="text-lg font-bold text-white/80 group-hover:text-white transition-colors">Trainer</h3>
+<p class="text-sm text-[#9cbaa6]">Schedules &amp; Clients</p>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-[#3b5443] peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
+<div class="h-2.5 w-2.5 rounded-full bg-background-dark hidden peer-checked:block"></div>
+</div>
+</div>
+</label>
+<!-- Role Card: Staff -->
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="role" type="radio" value="staff"/>
+<div class="flex items-center p-4 rounded-xl border border-[#3b5443]/50 bg-surface-dark/50 transition-all duration-200 hover:bg-surface-dark peer-checked:border-primary peer-checked:bg-[#152019]">
+<div class="flex-shrink-0 h-14 w-14 rounded-lg bg-[#28392e] text-[#9cbaa6] group-hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-3xl">badge</span>
+</div>
+<div class="ml-4 flex-1">
+<h3 class="text-lg font-bold text-white/80 group-hover:text-white transition-colors">Staff</h3>
+<p class="text-sm text-[#9cbaa6]">Check-ins &amp; POS</p>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-[#3b5443] peer-checked:border-primary peer-checked:bg-primary flex items-center justify-center">
+<div class="h-2.5 w-2.5 rounded-full bg-background-dark hidden peer-checked:block"></div>
+</div>
+</div>
+</label>
+</div>
+<!-- Role Action Button -->
+<button class="w-full mt-8 flex justify-center items-center py-4 px-4 border border-primary/30 text-base font-bold rounded-xl text-primary hover:bg-primary hover:text-background-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300">
+                Enter Dashboard
+            </button>
+</div>
+<!-- Footer -->
+<div class="pb-6 text-center">
+<div class="h-5 bg-transparent"></div>
+<a class="text-sm text-[#9cbaa6] hover:text-white transition-colors underline decoration-dotted" href="#">Need help logging in?</a>
+<p class="text-xs text-[#9cbaa6]/50 mt-2">v2.4.0 (Build 3902)</p>
+</div>
+</div>
+</body></html>

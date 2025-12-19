@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Trainer View</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df259",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>.no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden min-h-screen relative">
+<div class="sticky top-0 z-20 bg-background-light dark:bg-background-dark/95 backdrop-blur-sm transition-colors border-b border-gray-200 dark:border-white/5">
+<div class="flex items-center p-4 justify-between">
+<div class="flex items-center gap-3">
+<div class="relative w-10 h-10 overflow-hidden rounded-full border-2 border-primary">
+<img alt="Trainer profile headshot" class="object-cover w-full h-full" data-alt="Portrait of a male trainer smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLO07BoWOAXlq-IL-L3bdJXwtVkHiMLl6nxUkxPKDqHtHQJ4DzF3IlItJumrU9LrrDg7KzjrjQlR-2Z9NPBOzIrfitYaIhSSe7MamgTvFcGj39fc9WjYP8w2NHkOUXTAu4H_crM47kSMmA8krTsryOHDpPftpK2ualIszGIIyCwhHN3NX31kCWzO_q1eMt-QdJlyW9AUpXn-MfhFzRjSi0qiOkj3jh-l1Zfl47hqNPAaZ3nbOmxqT6q53VrznqYzRerot8MDLyVSLi"/>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-gray-500 dark:text-gray-400 font-medium uppercase tracking-wider">Gym Manager</span>
+<span class="text-sm font-bold text-slate-900 dark:text-white">FitLife Pro</span>
+</div>
+</div>
+<button class="relative flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition">
+<span class="material-symbols-outlined text-slate-900 dark:text-white">notifications</span>
+<span class="absolute top-2 right-2 w-2.5 h-2.5 bg-primary rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+</div>
+</div>
+<div class="flex flex-col w-full max-w-md mx-auto">
+<div class="px-4 pt-6 pb-2">
+<h1 class="text-3xl font-bold leading-tight tracking-tight text-slate-900 dark:text-white">
+                Ready to train,<br/>
+<span class="text-primary">Coach Mike?</span>
+</h1>
+</div>
+<div class="px-4 py-4">
+<label class="relative flex items-center w-full group">
+<span class="absolute left-4 flex items-center justify-center text-gray-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined">search</span>
+</span>
+<input class="w-full h-12 pl-12 pr-4 bg-white dark:bg-[#1c2e22] text-slate-900 dark:text-white placeholder-gray-400 rounded-xl border-none ring-1 ring-gray-200 dark:ring-white/10 focus:ring-2 focus:ring-primary focus:outline-none transition-all shadow-sm" placeholder="Search members..." type="text"/>
+</label>
+</div>
+<div class="flex gap-3 px-4 pb-6 overflow-x-auto no-scrollbar snap-x">
+<div class="flex-shrink-0 snap-start flex items-center gap-2 px-4 py-2.5 bg-primary rounded-full shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-background-dark text-[20px] filled">fitness_center</span>
+<p class="text-background-dark text-sm font-bold whitespace-nowrap">5 Sessions Today</p>
+</div>
+<div class="flex-shrink-0 snap-start flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-[#1c2e22] border border-gray-200 dark:border-white/10 rounded-full">
+<span class="material-symbols-outlined text-blue-400 text-[20px]">edit_document</span>
+<p class="text-slate-700 dark:text-gray-300 text-sm font-medium whitespace-nowrap">2 Plans Pending</p>
+</div>
+<div class="flex-shrink-0 snap-start flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-[#1c2e22] border border-gray-200 dark:border-white/10 rounded-full">
+<span class="material-symbols-outlined text-primary text-[20px]">trending_up</span>
+<p class="text-slate-700 dark:text-gray-300 text-sm font-medium whitespace-nowrap">95% Attendance</p>
+</div>
+</div>
+<div class="flex items-center justify-between px-4 pb-4 mt-2">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white tracking-tight">Assigned Members</h2>
+<button class="text-primary text-sm font-semibold hover:opacity-80">See All</button>
+</div>
+<div class="flex flex-col gap-4 px-4">
+<div class="relative overflow-hidden bg-white dark:bg-[#1c2e22] rounded-2xl p-4 shadow-sm border-l-4 border-primary">
+<div class="flex items-start justify-between mb-4">
+<div class="flex gap-3">
+<img alt="Sarah Jenkins portrait" class="w-12 h-12 rounded-full object-cover border-2 border-gray-100 dark:border-[#2a4030]" data-alt="Portrait of a female gym member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG4FqmQ26FRQHtBaURnvng3AxlgOLWpNSA-8ecIR5WhgDNxrwEQxqpHqViGSNIxYykha7VhPxkk9Trehuhj9msMf779qiF9DKj6UGq0PrITiPnEN_Y7ZnuckYiZI5h4HmMh9qEDnBKF9NtGwc_nROYljK6gdR0IvCr1C6Gn3Zzx5YIhmJSn1srplSafbWbsS0iPonNt7FYdQhaPHq3ab_llSZL1O9sgPWLJljihpVKkHdLjvn3jAlG8awHPZg0vnhjX_Q_Lp0Wnjzf"/>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Sarah Jenkins</h3>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+<p class="text-sm font-medium text-blue-500">Leg Day • 10:00 AM</p>
+</div>
+</div>
+</div>
+<div class="relative w-10 h-10 flex items-center justify-center rounded-full" style="background: conic-gradient(#0df259 75%, #2a4030 0);">
+<div class="w-8 h-8 bg-white dark:bg-[#1c2e22] rounded-full flex items-center justify-center">
+<span class="text-[10px] font-bold text-slate-900 dark:text-white">75%</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg bg-gray-100 dark:bg-white/5 text-slate-900 dark:text-white font-medium text-sm hover:bg-gray-200 dark:hover:bg-white/10 transition">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                        View Plan
+                    </button>
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg bg-primary text-background-dark font-bold text-sm hover:opacity-90 transition shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+                        Check In
+                    </button>
+</div>
+</div>
+<div class="relative overflow-hidden bg-white dark:bg-[#1c2e22] rounded-2xl p-4 shadow-sm border-l-4 border-orange-500">
+<div class="flex items-start justify-between mb-4">
+<div class="flex gap-3">
+<img alt="Marcus Ray portrait" class="w-12 h-12 rounded-full object-cover border-2 border-gray-100 dark:border-[#2a4030]" data-alt="Portrait of a male gym member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFE8KNZzkVRatq1Gu_1rgFoaT70_T7IZzCqCuZcMKVwK5HF3X4-LFXujquzrvr90SHQNSHQmTgRPOFAjg1tU_n9KgRmIy4RhiqQPfYlU-fg6fh3sJFztvvCOlJJFm8wvymdoNkLe-VLbgEG00sVFtPs0VeMjKyMS23c1mrbWnb-RvpQm6Ic7URC4pWp2X9Iq449AnnWIRB4fV0g7nmzyZX4Z_463mgpTsMXfVHwtjkKSk0zpB83DShnXr3MMAbme28mcVhCmz-zxDg"/>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Marcus Ray</h3>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-orange-500 text-[14px]">warning</span>
+<p class="text-sm font-medium text-orange-500">Absent 3 Days</p>
+</div>
+</div>
+</div>
+<div class="relative w-10 h-10 flex items-center justify-center rounded-full" style="background: conic-gradient(#f97316 30%, #2a4030 0);">
+<div class="w-8 h-8 bg-white dark:bg-[#1c2e22] rounded-full flex items-center justify-center">
+<span class="text-[10px] font-bold text-slate-900 dark:text-white">30%</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg bg-gray-100 dark:bg-white/5 text-slate-900 dark:text-white font-medium text-sm hover:bg-gray-200 dark:hover:bg-white/10 transition">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+                        Message
+                    </button>
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg bg-orange-500/10 text-orange-500 font-bold text-sm hover:bg-orange-500/20 transition">
+<span class="material-symbols-outlined text-[18px]">history</span>
+                        Log Issue
+                    </button>
+</div>
+</div>
+<div class="relative overflow-hidden bg-white dark:bg-[#1c2e22] rounded-2xl p-4 shadow-sm border-l-4 border-blue-400">
+<div class="flex items-start justify-between mb-4">
+<div class="flex gap-3">
+<img alt="Elena Gomez portrait" class="w-12 h-12 rounded-full object-cover border-2 border-gray-100 dark:border-[#2a4030]" data-alt="Portrait of a female gym member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCM6tZmdOmTqsABLMZLsZgxdmm05uEHrbIu8YcmDDSrZP0bKhrJwsKB5ejvfDLorIM2MMoVQoSyKrnLPgtacDkc43SvyiZY2k3SaVcsEx4LSa09ZBbpaNzxdwBJc_TpoGop2mI1S9O1XtZ1jnUEQfC0YhgO18syqCCqSVwTnbhTP0VsGUKZ2tnrdtnGCppX0CL0OKn4PLKekXaOKH-IheqZC5Ka3duU0f9_qQw6Yvx0uFYZELTbyQkxPttUK6rE9Op3tr5w0qev-qni"/>
+<div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Elena Gomez</h3>
+<div class="flex items-center gap-1.5 mt-0.5">
+<p class="text-sm font-medium text-gray-500 dark:text-gray-400">Rest Day</p>
+</div>
+</div>
+</div>
+<div class="relative w-10 h-10 flex items-center justify-center rounded-full" style="background: conic-gradient(#3b82f6 90%, #2a4030 0);">
+<div class="w-8 h-8 bg-white dark:bg-[#1c2e22] rounded-full flex items-center justify-center">
+<span class="text-[10px] font-bold text-slate-900 dark:text-white">90%</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg bg-gray-100 dark:bg-white/5 text-slate-900 dark:text-white font-medium text-sm hover:bg-gray-200 dark:hover:bg-white/10 transition">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+                        View Plan
+                    </button>
+<button class="flex items-center justify-center gap-2 h-10 rounded-lg bg-blue-500/10 text-blue-500 font-bold text-sm hover:bg-blue-500/20 transition">
+<span class="material-symbols-outlined text-[18px]">edit_calendar</span>
+                        Reschedule
+                    </button>
+</div>
+</div>
+<div class="mt-4 p-6 rounded-2xl border border-dashed border-gray-300 dark:border-white/20 flex flex-col items-center justify-center text-center opacity-60 hover:opacity-100 transition cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-gray-100 dark:bg-white/5 flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-gray-400 dark:text-white/40">person_add</span>
+</div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">Assign new member</p>
+</div>
+</div>
+<div class="h-24"></div> 
+</div>
+<button class="fixed z-30 bottom-6 right-4 w-14 h-14 bg-primary rounded-full shadow-xl shadow-primary/30 flex items-center justify-center transform hover:scale-105 transition-all duration-200 group">
+<span class="material-symbols-outlined text-background-dark text-3xl group-hover:rotate-90 transition-transform duration-300">add</span>
+</button>
+
+</body></html>

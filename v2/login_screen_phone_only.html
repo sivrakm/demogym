@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Staff Portal Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0df259",
+                        "background-light": "#f5f8f6",
+                        "background-dark": "#102216",
+                        "surface-dark": "#162b1d",
+                        "input-bg": "#1c3324",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-hidden max-w-md mx-auto shadow-2xl">
+<!-- Ambient Background Glow -->
+<div class="absolute top-0 left-0 w-full h-[50vh] bg-gradient-to-b from-primary/10 to-transparent pointer-events-none z-0"></div>
+<!-- Header Image / Branding -->
+<div class="relative z-10 w-full h-[280px] flex flex-col justify-end">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-center bg-cover" data-alt="Dark moody gym interior with dumbbells and neon lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmVPGxrCyyoR1PSy6ccnnHc-zLsLlXFa7cSqV3IA9PVzM5QpzWsEGxtO-GqTkHjlzeGNiQM46dR_STQKK7OnGUNLyzfpzM-43LHftJldGMu_p4RbvaKUGtGDwmnEbRv8l_zeH9KN4twDZn_DbO43nBKanU6j5nHaBQdBg_3KmXXxbHroxBBsXk_xEOkPOtFP8Ktfr9X0uubU9ugSXtkR0Myd_y_4HCw-ru1oLNfsRoViihwtfA_YtopDPn5YOZ3jli9iMDvFIaXFn0");'></div>
+<div class="absolute inset-0 bg-gradient-to-b from-background-dark/30 via-background-dark/80 to-background-dark"></div>
+</div>
+<!-- Logo & Title Area -->
+<div class="relative z-10 px-6 pb-6 text-center">
+<div class="inline-flex items-center justify-center p-3 rounded-full bg-primary/10 backdrop-blur-sm border border-primary/20 mb-4 shadow-[0_0_15px_rgba(13,242,89,0.3)]">
+<span class="material-symbols-outlined text-primary text-4xl">fitness_center</span>
+</div>
+<h1 class="text-white text-3xl font-bold tracking-tight">Staff Portal</h1>
+<p class="text-gray-400 text-sm font-medium mt-1 uppercase tracking-widest">Gym Management OS</p>
+</div>
+</div>
+<!-- Login Form Section -->
+<div class="relative z-10 flex-1 flex flex-col px-6 pt-2 pb-8">
+<!-- Instructions -->
+<div class="text-center mb-8">
+<p class="text-gray-300 text-base leading-relaxed">
+                    Enter your registered mobile number to receive your login access code.
+                </p>
+</div>
+<!-- Input Group -->
+<div class="space-y-6">
+<label class="block">
+<span class="text-xs font-bold text-primary uppercase tracking-wider ml-1 mb-2 block">Mobile Number</span>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 flex items-center pl-4 border-r border-gray-600/50 pr-3 my-2">
+<span class="material-symbols-outlined text-gray-400 text-xl mr-2">public</span>
+<span class="text-gray-200 font-medium font-display">+1</span>
+<span class="material-symbols-outlined text-gray-500 text-sm ml-1">arrow_drop_down</span>
+</div>
+<input class="block w-full rounded-xl bg-input-bg border border-gray-700/50 text-white placeholder-gray-500 focus:border-primary focus:ring-1 focus:ring-primary pl-[110px] pr-4 py-4 text-xl font-medium shadow-inner transition-all duration-200" placeholder="(555) 000-0000" type="tel"/>
+<!-- Status Indicator Icon (Optional validation feedback) -->
+<div class="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none opacity-0 group-focus-within:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-primary">smartphone</span>
+</div>
+</div>
+</label>
+<!-- Primary Action Button -->
+<button class="relative w-full overflow-hidden rounded-xl bg-primary hover:bg-[#0be052] active:scale-[0.98] transition-all duration-150 group h-14 shadow-[0_4px_20px_rgba(13,242,89,0.25)]">
+<div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+<span class="relative flex items-center justify-center gap-2 text-background-dark text-lg font-bold tracking-wide uppercase">
+                        Get Login Code
+                        <span class="material-symbols-outlined font-bold text-[22px]">arrow_forward</span>
+</span>
+</button>
+</div>
+<!-- Helper Links / Footer -->
+<div class="mt-auto pt-10 flex flex-col items-center gap-6">
+<button class="text-sm font-medium text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">help</span>
+                    Trouble logging in?
+                </button>
+<div class="w-full border-t border-white/5 pt-6 text-center">
+<p class="text-xs text-gray-600 font-medium">
+                        Powered by <span class="text-gray-500 font-bold">FitManage Platform</span> v2.4
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</body></html>
